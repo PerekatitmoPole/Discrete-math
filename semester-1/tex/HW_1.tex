@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{tempora}
+\usepackage{microtype}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+\usepackage{geometry}
+\geometry{top=25mm,left=25mm,right=20mm,bottom=25mm}
+
+\usepackage{enumitem}
+\usepackage{graphicx}
+\setlist[enumerate]{leftmargin=*, itemsep=0.55\baselineskip, topsep=0.35\baselineskip}
+\setlist[itemize]{leftmargin=*, itemsep=0.25\baselineskip, topsep=0.25\baselineskip}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+
+\newcommand{\DefItem}[2]{\item \textbf{#1}\\#2}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Домашняя работа №1. Теория множеств.}\\[2mm]
+\end{center}
+\vspace{2mm}
+\hrule
+\vspace{4mm}
+
+\section*{Задание 0}
+Определите истинность заданных утверждений. Считайте, что $a \ne b$.
+\begin{enumerate}[label=\arabic*.]
+\item $a \in 2^{\{a\}}$.
+\item $2^{\{a,\varnothing\}} \subset 2^{\{a,b,\varnothing\}}$.
+\item $\{a,b\} \subseteq 2^{\{a,b\}}$.
+\end{enumerate}
+
+\section*{Задание 1}
+\[
+A=\{0,3,5,6\},\quad
+B=\{0,1,2,3,5,7\},\quad
+C=\{1,4,5,6\},\quad
+D=\{0,6,7,8\},\quad
+U=\{0,1,2,3,\ldots,9\}.
+\]
+Нарисуйте диаграмму Венна и найдите элементы множества
+\[
+P=(\overline{A}\cap \overline{B})
+\cup (B\cap C\cap \overline{D})
+\cup (B\cap \overline{C}\cap \overline{D})
+\cup (A\cap \overline{B}\cap D).
+\]
+
+\section*{Задание 2}
+$U$ — универсум. Упростите выражения, если $A\subset B$, $B=C$.
+\begin{enumerate}[label=\arabic*.]
+\item $\overline{A\cup \overline{\overline{B}\cap C}}$.
+\item $\overline{A\cap \overline{B}\cap C}\ \cup\ U$.
+\end{enumerate}
+
+\section*{Задание 3}
+Упростить выражение, используя законы склеивания, поглощения, де Моргана и т.\,п.
+\begin{enumerate}[label=\arabic*.]
+\item $(A\cup \overline{B})\cap (A\cup \overline{B}\cup C)\cap (A\cup \overline{B}\cup D)$.
+\item $\overline{A}\cap \overline{B}\ \cup\ A\cap B\ \cup\ \overline{A}\cap B$.
+\item $\overline{A\cup A\cap B\cup A\cap C}$.
+\end{enumerate}
+
+\section*{Задание 4}
+$U$ — универсум. Упростить формулу при условии, что множества $A,B,C,D$ связаны отношением
+\[
+A\subset B\subset C\subset D\subset U.
+\]
+\[
+P=\overline{A}\cap B\cap \overline{C}\ \cup\ \overline{A}\cap C\cap D\ \cup\ A\cap B\cap \overline{C}\ \cup\ A\cap B\cap C.
+\]
+
+
+\section*{Задание 5}
+Воспользовавшись свойствами (законами) операций над множествами, выяснить, верны ли тождества для любых $A,B,C$.
+\begin{enumerate}[label=\arabic*.]
+\item $A \cap (B \Delta C) = (A \cap B)\Delta (A \cap C)$.
+\item $A \setminus (A \setminus B) = A \cap B$.
+\end{enumerate}
+
+\section*{Задание 6}
+Задайте множество аналитически по закрашенной области на диаграмме Эйлера–Венна. Упростите полученные выражения.
+
+\[
+\includegraphics[width=0.5\linewidth]{HW1.diagram.png}
+\]
+
+
+\section*{Задание 7}
+\begin{enumerate}[label=\arabic*.]
+\item Найдите множества $A$, $B$ и $C$, если
+\[
+A\times B=\{(1,4),(2,3),(1,3),(2,4)\},
+\]
+\[
+B\times C=\{(3,5),(4,5),(4,6),(4,7),(3,7),(3,6)\}.
+\]
+\item Пусть множество $A$ состоит из $6$ элементов, множество $B$ — из $4$ элементов. При этом $|A\cap B|=3$. Найдите
+\[
+|A\times B\times (A\cup B)|.
+\]
+\item Найдите мощность множества
+\[
+(A\times (B\cap A))\cup (A\times B),
+\]
+если
+\[
+A=\{m,n,k,l\},\qquad B=\{a,b,c,i,j,k\}.
+\]
+\end{enumerate}
+
+\section*{Задание 8}
+\begin{enumerate}[label=\arabic*.]
+\item Пусть $A=\{3,|B|\}$, $B=\{1,|A|,|B|\}$. Найдите, чему равны множества $A$ и $B$.
+\item Даны множества
+\[
+A=\{a,b,c,d\},\quad
+B=\{a,b,4\},\quad
+C=\{4,2,c\},\quad
+D=\{a,b,3\},\quad
+E=\{1,b\}.
+\]
+Найдите $a,b,c,d$, зная, что $B\subseteq A$, $C\subseteq A$, $D\subseteq A$, $E\subseteq B$.
+\end{enumerate}
+
+\section*{Задание 9}
+Предположим, что $|A|=m$ и $|B|=n$. Найдите мощность множества
+\begin{enumerate}[label=\arabic*.]
+\item $\bigl|\{\,X\subseteq P(A)\mid |X|\le 1\,\}\bigr|$.
+\end{enumerate}
+
+\end{document}

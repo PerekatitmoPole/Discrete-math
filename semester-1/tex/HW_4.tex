@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{microtype}
+
+\usepackage{amsmath,amssymb,mathtools}
+
+\usepackage{geometry}
+\geometry{top=25mm,left=25mm,right=20mm,bottom=25mm}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*, itemsep=0.55\baselineskip, topsep=0.35\baselineskip}
+\setlist[itemize]{leftmargin=*, itemsep=0.25\baselineskip, topsep=0.25\baselineskip}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+
+\newcommand{\Task}[1]{\section*{\normalfont\bfseries #1}}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Домашняя работа №4. Кодирование}\\[2mm]
+\end{center}
+\vspace{2mm}
+\hrule
+\vspace{4mm}
+
+\Task{Закодируйте своё ФИО без учёта пробелов и регистра}
+
+\begin{enumerate}[label=\arabic*.]
+\item Равномерным кодом.
+\item Кодом Хаффмана. Построить дерево.
+\item Кодом Шеннона--Фано. Заполнить таблицу.
+\item Арифметическим кодом. Заполнить таблицы с левыми и правыми границами. Допускается использовать программу (код прилагается к работе), однако все отрезки должны быть приведены в работе. Построить бинарный код.
+\item Оцените энтропию.
+\item Сравните средние длины кодовых слов и энтропию.
+\item Результат арифметического кодирования закодируйте кодом Хэмминга. Оцените \textit{Rate}.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Важно:} для каждого разделимого кода продемонстрировать таблицу кодовых слов.
+
+\end{document}

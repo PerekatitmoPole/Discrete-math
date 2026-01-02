@@ -1,0 +1,136 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{microtype}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+\usepackage{geometry}
+\geometry{top=25mm,left=25mm,right=20mm,bottom=25mm}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*, itemsep=0.55\baselineskip, topsep=0.35\baselineskip}
+\setlist[itemize]{leftmargin=*, itemsep=0.25\baselineskip, topsep=0.25\baselineskip}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\Task}[1]{\section*{\normalfont\bfseries Задание #1}}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Домашняя работа №2. Бинарные отношения.}\\[2mm]
+\end{center}
+\vspace{2mm}
+\hrule
+\vspace{4mm}
+
+\Task{1}
+Пусть $A=\{1,2,3,4,5\}$, $B=\{6,7,8,9\}$, $C=\{10,11,12,13\}$.\\
+$R\subseteq A\times B$, $S\subseteq B\times C$, где
+\[
+R=\{(1,7),(4,6),(5,6),(2,8)\},\qquad
+S=\{(6,10),(6,11),(7,10),(8,13)\}.
+\]
+\begin{enumerate}[label=\arabic*)]
+\item Представьте $R$ в виде ориентированного графа (считаем, что $R\subseteq (A\times B)^2$) и в виде матрицы.
+\item Определить отношения:
+\begin{enumerate}[label=\alph*)]
+\item $R^{-1}$;
+\item $S^{-1}$;
+\item $S^{-1};R^{-1}$;
+\item $(R;S)^{-1}$.
+\end{enumerate}
+\end{enumerate}
+
+\Task{2}
+Определим $R^{-1}$ следующим образом: если $xRy$, то $yR^{-1}x$.\\
+Выполнено ли соотношение $R;R^{-1}=id_A$, где $id_A$ — тождественное отношение?
+
+\Task{3}
+Докажите, что
+\[
+(R;S)^{-1}=S^{-1};R^{-1}.
+\]
+
+\Task{4}
+Пусть $R$ и $S$ — антисимметричные отношения на $A$.\\
+Будет ли антисимметричным их
+\begin{enumerate}[label=\alph*)]
+\item объединение?
+\item пересечение?
+\end{enumerate}
+
+\subsection*{ВНИМАНИЕ}
+В заданиях на свойства БО обоснование ответа обязательно. Например, для доказательства симметричности необходимо рассмотреть все пары (или воспользоваться свойствами математических операций), а для доказательства транзитивности необходимо рассмотреть все тройки (или воспользоваться свойствами математических операций), для опровержения — привести контрпример.
+
+\Task{5}
+Пусть $A=\{a,b,c,d,e\}$, а $S$, $T$, $U$ и $V$ — отношения на $A$, где
+\[
+S=\{(a,a),(a,b),(b,c),(b,d),(c,e),(e,d),(c,a)\},
+\]
+\[
+T=\{(a,b),(b,a),(b,c),(b,d),(e,e),(d,e),(c,b)\},
+\]
+\[
+U=\{(a,b),(a,a),(b,c),(b,b),(e,e),(b,a),(c,b),(c,c),(d,d),(a,c),(c,a)\},
+\]
+\[
+V=\{(a,b),(b,c),(b,b),(e,e),(b,a),(c,b),(d,d),(a,c),(c,a)\}.
+\]
+Определите свойства отношений.
+
+\Task{6}
+Определите, какие из приведенных ниже отношений на $\Z^2$ являются рефлексивными, симметричными, а какие транзитивными:
+\begin{enumerate}[label=\arabic*)]
+\item $x+y$ — нечётное число;
+\item $x+y$ — чётное число;
+\item $xy$ — нечётное число;
+\item $x+xy$ — чётное число.
+\end{enumerate}
+
+\Task{7}
+Перечислите упорядоченные пары, принадлежащие отношениям, заданным на множестве
+\[
+\{x:\ x\in \Z\ \text{и}\ 1\le x\le 12\}:
+\]
+\begin{enumerate}[label=\arabic*)]
+\item $R=\{(x,y):\ xy=9\}$;
+\item $S=\{(x,y):\ 2x=3y\}$;
+\item определите свойства $R$ и $S$;
+\item замыкание $R$ по транзитивности;
+\item замыкание $S$ по транзитивности.
+\end{enumerate}
+
+\Task{8}
+Найдите замыкание по рефлексивности, по симметричности и по транзитивности отношения
+\[
+\{(a,a),(b,b),(c,c),(a,c),(a,d),(b,d),(c,a),(d,a)\},
+\]
+заданного на множестве $\{a,b,c,d\}$.\\
+Имеет ли смысл строить замыкание по антисимметричности?
+
+\Task{9}
+Отношение $R$ на множестве $\Z^2$ определяется так:
+\[
+xRy \iff x^2-y^2\ \text{делится на}\ 3.
+\]
+Докажите, что $R$ — отношение эквивалентности, и опишите классы эквивалентности.
+
+\Task{10}
+Prove or disprove the following statements about the functions $f$ and $g$:
+\begin{enumerate}[label=\alph*)]
+\item If $f$ and $f\circ g$ are injections, then $g$ is also an injection.
+\item If $f$ and $f\circ g$ are surjections, then $g$ is also a surjection.
+\end{enumerate}
+
+\Task{11}
+Выполнен ли закон сложения степеней $R^i;R^j=R^{i+j}$, если $i$ и $j$ разного знака?
+
+\end{document}

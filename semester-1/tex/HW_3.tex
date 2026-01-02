@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+\usepackage{geometry}
+\geometry{top=25mm,left=25mm,right=20mm,bottom=25mm}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*, itemsep=0.55\baselineskip, topsep=0.35\baselineskip}
+\setlist[itemize]{leftmargin=*, itemsep=0.25\baselineskip, topsep=0.25\baselineskip}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+
+\newcommand{\Task}[1]{\section*{\normalfont\bfseries Задание #1}}
+\newcommand{\NOT}[1]{\overline{#1}}
+\newcommand{\NOR}{\downarrow}
+\newcommand{\NAND}{\mid}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Домашняя работа №3. Булевы функции}\\[2mm]
+\end{center}
+\vspace{2mm}
+\hrule
+\vspace{4mm}
+
+\Task{1}
+Получить СДНФ и СКНФ для функции. Представить функцию в виде вектора минтермов и вектора макстермов.
+\begin{enumerate}[label=\arabic*)]
+\item $f_1 = x \leftrightarrow \bigl(y \NOR \NOT{z}\bigr)$.
+\item $f_2 = (10101001)$.
+\item $f_3(A,B,C,D) = A + BC + D$.
+\item $f_4 = f_{47541}^{(4)}$.
+\end{enumerate}
+
+\Task{2}
+Разложить функции по всем переменным.\\
+В ответ записать вектор минтермов для $f_1$ и вектор макстермов для $f_2$.
+\[
+f_1(A,B,C,D)=A\NOT{C}+A\NOT{B}+\NOT{A}C+D,
+\]
+\[
+f_2(A,B,C,D)=(A+\NOT{C})\,(A+\NOT{B})\,(\NOT{A}+C)\,D.
+\]
+
+\Task{3}
+Функция задана вектором минтермов. Методом Квайна найдите сокращённую ДНФ. Укажите число простых импликант, из которых состоит сокращённая форма, и число вхождений переменных. Постройте карту Карно и по ней найдите тупиковые и минимальные ДНФ и КНФ.
+\[
+f(A,B,C,D)=(0,3,5,6,7,9,10,13,14,15).
+\]
+
+\Task{4}
+Найти СДНФ, СКНФ, сокращённую, тупиковые и минимальные ДНФ и КНФ при помощи карты Карно.
+\[
+\includegraphics[width=0.5\linewidth]{HW3.map.png}
+\]
+
+\Task{5}
+Перечислить все существенные и фиктивные переменные у функции:
+\[
+f=(1011010110110101).
+\]
+
+\Task{6}
+Докажите, что любую функцию, кроме тождественной $1$, можно представить в виде СКНФ.
+
+\Task{7}
+Построить полином Жегалкина для следующих формул. \\
+\underline{Для каждой формулы выбрать один метод построения полинома Жегалкина, но должны} \\
+\underline{быть представлены хотя бы три различных метода построения!}
+\begin{enumerate}[label=\alph*)]
+\item $x \rightarrow (\neg y \land z)$;
+\item $\neg (x \lor y) \NOR z$;
+\item $(x \to y)\ \NAND\ \neg(y \land \neg z)$;
+\item \(\bigl((x \to y)\ \NAND\ \neg x\bigr)\land z\).
+\end{enumerate}
+
+\Task{8}
+Проверить, является ли данная система функций полной. В случае, если да, выяснить, является ли она безызбыточной.
+\begin{enumerate}[label=\alph*)]
+\item $\{\,x \leftrightarrow y,\ x \lor y\,\}$;
+\item $\{\,x \lor y,\ (x \leftrightarrow y)z,\ x \NOR (yz)\,\}$;
+\item $\{\,\neg x,\ x \lor \neg y\,\neg z\,\}$;
+\item $\{\,x \leftrightarrow y,\ \neg x,\ \neg x \leftrightarrow y\,\}$;
+\item $\{\,x \NOR \neg y,\ \neg x \NAND y,\ x \to y\,\}$.
+\end{enumerate}
+
+\Task{9}
+Проверить следующее утверждение: $X \subseteq Y$, где $X$, $Y$ — классы функций, сохраняющие нуль, сохраняющие единицу и монотонные.
+
+\end{document}
