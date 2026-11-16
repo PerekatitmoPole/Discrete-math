@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\makeatletter
+\def\input@path{{../../}}
+\makeatother
+\usepackage{discrete-practice}
+
+\begin{document}
+
+\PracticeHeader{1}{6}{Булевы функции и нормальные формы}
+
+\Task{Задание 1}
+Укажите номера формул, представленных в ДНФ.
+\begin{numlist}
+    \item $AB+CD$
+    \item $A+B+C$
+    \item $A+BC+\overline{E}$
+    \item $P+Q(P+R)$
+    \item $A+A$
+\end{numlist}
+
+\Task{Задание 2}
+Укажите номера формул, представленных в КНФ.
+\begin{numlist}
+    \item $(AC+B)A$
+    \item $A(B+C)$
+    \item $B(AB+\overline{A}B)$
+    \item $ABC$
+    \item $A+B$
+\end{numlist}
+
+\Task{Задание 3}
+Найдите инверсию выражения и упростите его.
+\[
+(\overline{A}+\overline{B}+\overline{C})(\overline{B}+\overline{C})(\overline{B}+\overline{C}+\overline{D})
+\]
+
+\Task{Задание 4}
+Указать номера функций, представленных:\\ а) в СДНФ; б) в СКНФ; в) в ДНФ; г) в КНФ.
+\begin{numlist}
+    \item $f(A,B)=\overline{A}\,\overline{B}+A\overline{B}$
+    \item $f(A,B,C)=AB+AC+BC$
+    \item $f(A,B,C)=(A+B+C)(\overline{A}+B+\overline{C})(A+\overline{B}+C)$
+    \item $f(A,B,C,D)=(\overline{A}+B+\overline{C}+D)(\overline{B}+C+D)(A+\overline{C}+D)$
+    \item $f(A,B,C,D)=\overline{A}BC+\overline{B}CD+\overline{A}CD+\overline{A}BD$
+    \item $f(A,B,C)=\overline{A}\,\overline{B}C+\overline{A}B\overline{C}+\overline{A}\,\overline{B}\,\overline{C}$
+    \item $f(A,B,C,D)=(A+\overline{B}+C)(A+B+C)(A+\overline{B+C})$
+\end{numlist}
+
+\Task{Задание 5}
+Записать десятичные индексы макстермов.
+\begin{numlist}
+    \item $A+\overline{B}+C+D$
+    \item $R+S+\overline{T}+\overline{K}$
+    \item $P+Q+\overline{R}+S$
+    \item $P+\overline{Q}$
+    \item $\alpha+\overline{\beta}+\overline{\gamma}$
+    \item $A+\overline{B_1}+B_2$
+\end{numlist}
+Записать десятичные индексы минтермов, соответствующих инверсиям указанных макстермов.
+
+\Task{Задание 6}
+Укажите номера функций, возвращающих единичное значение на наборе 12.
+\begin{numlist}
+    \item $f=A\overline{B}+B\overline{D}+\overline{A}C$
+    \item $f=BD+AC+CD$
+    \item $f=\overline{D}+\overline{A}C+\overline{B}D$
+    \item $f=\overline{C}+BD+\overline{A}\,\overline{B}$
+    \item $f=ABC+BD$
+    \item $f=A\overline{C}+AC+BD$
+\end{numlist}
+
+\Task{Задание 7}
+Запишите двоичные наборы, на которых минтермы возвращают единичное значение:
+\[
+1.\; AB\overline{C}\,\overline{D}E
+\qquad
+2.\; VX\overline{Y}Z
+\]
+
+\Task{Задание 8}
+Укажите номера, где записаны минтермы.
+\begin{numlist}
+    \item $AB\overline{C}$
+    \item $ABAC$
+    \item $A+\overline{B}+C$
+    \item $BC\overline{D}$
+    \item $PQ\overline{R}S$
+    \item $ACM$
+    \item $AK\overline{K}B$
+    \item $ABBC$
+\end{numlist}
+
+\Task{Задание 9}
+Сколько существует минтермов шести аргументов, двоичные индексы которых начинаются с нуля.
+
+\Task{Задание 10}
+Для указанной функции записать СДНФ:
+\[
+f_1=(01101011),\quad f_2=(01001110),\quad f_3=(0100111001)
+\]
+
+\clearpage
+
+\Task{Задание 11}
+Представить функцию в СДНФ при помощи таблицы истинности:
+\[
+f(A,B,C)=\overline{A}+B\overline{C}
+\]
+
+\Task{Задание 12}
+Получить СДНФ для функции. Представить функцию в виде вектора минтермов:
+\[
+f=(x\oplus y)\to y\cdot x
+\]
+
+\Task{Задание 13}
+Разложить функцию по всем переменным, чтобы в результате получить СДНФ:
+\[
+f(A,B,C,D)=AB+\overline{C},\qquad f(A,B,C,D)=A\overline{C}
+\]
+
+\Task{Задание 14}
+Построить СКНФ функций из предыдущего задания по известным СДНФ.
+
+\Task{Задание 15}
+Алгоритм распознавания фиктивной переменной по таблице истинности. Перечислить все существенные и фиктивные переменные у функций:
+\[
+f_1=(0101111101011111),\qquad f_2=(1011010110110101)
+\]
+Удалить фиктивные переменные.
+
+\end{document}

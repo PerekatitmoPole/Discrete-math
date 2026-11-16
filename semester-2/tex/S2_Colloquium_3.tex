@@ -1,0 +1,381 @@
+\documentclass[11pt]{article}
+\usepackage{discrete-practice}
+
+\newcommand{\ColloquiumHeader}[3]{%
+  \csname Practice@header\endcsname{#1}{Коллоквиум}{#2}{Вопросы и ответы}{}%
+  \hypersetup{pdftitle={Дискретная математика: Коллоквиум #2}}%
+}
+\newcommand{\LectureSource}[2]{\PracticeLink{#1}{#2}}
+\newcommand{\QA}[4]{%
+  \par\addvspace{.65\baselineskip}\noindent
+  \begin{minipage}[t]{\linewidth}
+    \raggedright
+    \textbf{#1. #2}\par\nobreak
+    \vspace{.15\baselineskip}
+    #3\par\nobreak
+    {\small #4\par}%
+  \end{minipage}\par
+}
+\begin{document}
+\ColloquiumHeader{2}{3}
+\medskip\noindent\small Под каждым ответом указаны файл лекции и страницы PDF.
+Номера весенних лекций соответствуют именам файлов в архиве.
+\par\normalsize
+
+\QA{1}{Инцидентность вершин и рёбер}{Вершина и ребро инцидентны, если вершина является одним из концов этого ребра.}{\LectureSource{Весенний архив, лекция 1, стр.~5}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=5}}
+
+\QA{2}{Смежность вершин и рёбер}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Смежные вершины.} Являются концами одного ребра.
+\item \textbf{Смежные рёбра.} Имеют общую вершину.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~5}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=5}}
+
+\QA{3}{Ребро, ориентированное ребро, петля, кратное ребро}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Неориентированное ребро.} Неупорядоченная пара концов $\{u,v\}$.
+\item \textbf{Ориентированное ребро (дуга).} Упорядоченная пара $(u,v)$.
+\item \textbf{Петля.} Ребро с совпадающими концами.
+\item \textbf{Кратные рёбра.} Несколько рёбер, соединяющих одну и ту же пару вершин.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~5--8}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=5}}
+
+\QA{4}{Изолированная вершина, висячая вершина и висячее ребро}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Изолированная вершина.} Вершина, которой не инцидентно ни одно ребро.
+\item \textbf{Висячая вершина.} Вершина, которой инцидентно ровно одно ребро.
+\item \textbf{Висячее ребро.} Единственное ребро, инцидентное висячей вершине.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~8}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=8}}
+
+\QA{5}{Простой граф, ориентированный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Простой граф.} Граф без петель и кратных рёбер.
+\item \textbf{Ориентированный граф.} Граф с дугами: порядок концов дуги задаёт её направление.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~6--9}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=6}}
+
+\QA{6}{Мультиграф, псевдограф}{В терминологии лекции:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Мультиграф.} Граф, содержащий кратные рёбра.
+\item \textbf{Псевдограф.} Граф, содержащий петли; в нём могут быть и кратные рёбра.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~9}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=9}}
+
+\QA{7}{Взвешенный, направленный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Взвешенный граф.} Граф, в котором каждому ребру приписан вес.
+\item \textbf{Направленный граф.} Орграф без пар противоположных дуг $(u,v)$ и $(v,u)$.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~6--7}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=6}}
+
+\QA{8}{Нуль-граф, пустой граф, тривиальный граф}{В терминологии лекции:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Нуль-граф.} Граф без рёбер.
+\item \textbf{Пустой граф.} Граф без вершин.
+\item \textbf{Тривиальный граф.} Граф с одной вершиной и без рёбер.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~7}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=7}}
+
+\QA{9}{Изоморфизм графов. Помеченный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Изоморфизм.} Биекция между множествами вершин, сохраняющая смежность в обе стороны. Равносильно: после переименования вершин графы совпадают и по меткам, и по связям.
+\item \textbf{Помеченный граф.} Граф, вершины которого различаются метками.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~18}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=18}}
+
+\QA{10}{Способы представления графа}{Диаграмма, списки смежности, матрица смежности \guillemotleft{}вершина на вершину\guillemotright{} и матрица инцидентности \guillemotleft{}вершина на ребро\guillemotright{}.}{\LectureSource{Весенний архив, лекция 1, стр.~13--17}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=13}}
+
+\QA{11}{Описание кратных рёбер и петель в матрице смежности}{Кратность между различными вершинами записывают в соответствующей ячейке. На диагонали неориентированную петлю учитывают дважды, ориентированную -- один раз.}{\LectureSource{Весенний архив, лекция 1, стр.~14--15}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=14}}
+
+\QA{12}{Описание кратных рёбер и петель в матрице инцидентности}{Каждому ребру соответствует отдельный столбец, поэтому у параллельных рёбер одинаковые столбцы. В примере лекции неориентированная петля обозначается числом $2$ в строке своей вершины. Для петли орграфа в примере отмечены совпадающие начало и конец ($+1$ и $-1$).}{\LectureSource{Весенний архив, лекция 1, стр.~16--17}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=16}}
+
+\QA{13}{Степень вершины в неориентированном и ориентированном графах}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Неориентированный граф.} Степень -- число концов рёбер, приходящихся на вершину. Петля даёт два конца.
+\item \textbf{Орграф, степень входа.} $\deg^-(v)$ -- число дуг, входящих в $v$.
+\item \textbf{Орграф, степень исхода.} $\deg^+(v)$ -- число дуг, выходящих из $v$.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~10--12}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=10}}
+
+\QA{14}{Лемма о рукопожатиях для неориентированного графа}{$\sum_{v\in V}\deg(v)=2|E|$, потому что у каждого ребра два конца. Отсюда число вершин нечётной степени чётно.}{\LectureSource{Весенний архив, лекция 1, стр.~11}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=11}}
+
+\QA{15}{Лемма о рукопожатиях для ориентированного графа}{Каждая дуга даёт один вход и один выход. Поэтому $\sum_v\deg^-(v)=\sum_v\deg^+(v)=|E|$, а сумма обеих степеней по всем вершинам равна $2|E|$.}{\LectureSource{Весенний архив, лекция 1, стр.~12}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=12}}
+
+\QA{16}{Подграф}{$H=(V',E')$ -- подграф $G=(V,E)$, если $V'\subseteq V$, $E'\subseteq E$ и оба конца любого ребра $E'$ входят в $V'$.}{\LectureSource{Весенний архив, лекция 1, стр.~19}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=19}}
+
+\QA{17}{Надграф}{Граф $H$ является надграфом $G$, если $G$ -- подграф $H$: можно добавить вершины и рёбра, сохранив исходные.}{\LectureSource{Весенний архив, лекция 1, стр.~19}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=19}}
+
+\QA{18}{Собственный и несобственный подграфы}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Собственный подграф.} Непустой подграф, отличающийся от исходного графа.
+\item \textbf{Несобственный подграф.} Пустой подграф или сам исходный граф.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~19}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=19}}
+
+\QA{19}{Частичный граф}{Подграф, содержащий все вершины исходного графа и некоторое подмножество его рёбер.}{\LectureSource{Весенний архив, лекция 1, стр.~19}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=19}}
+
+\QA{20}{Регулярный (однородный) граф, полный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Регулярный (однородный) граф.} Все вершины имеют одинаковую степень.
+\item \textbf{Полный граф.} Простой граф, в котором смежны любые две различные вершины; равносильно, степень каждой вершины равна $n-1$.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~20}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=20}}
+
+\QA{21}{Дополнение, объединение, пересечение графов}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Дополнение.} Сохраняет вершины простого графа и содержит ровно те рёбра полного графа, которых не было в исходном.
+\item \textbf{Объединение.} Объединяет множества вершин и множества рёбер.
+\item \textbf{Пересечение.} Пересекает множества вершин и множества рёбер.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 1, стр.~21}{https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view\#page=21}}
+
+\QA{22}{Путь. Цепь. Простая цепь}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Путь (маршрут).} Последовательность чередующихся вершин и соединяющих их рёбер.
+\item \textbf{Цепь.} Маршрут без повторяющихся рёбер.
+\item \textbf{Простая цепь.} Цепь, в которой не повторяются и вершины.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~4}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=4}}
+
+\QA{23}{Замкнутый путь, цикл и простой цикл}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Замкнутый путь.} Начальная и конечная вершины совпадают.
+\item \textbf{Цикл.} Замкнутая цепь.
+\item \textbf{Простой цикл.} Замкнутая цепь, в которой вершины не повторяются, кроме начала и конца; в определении слайда длина не меньше трёх.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~4}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=4}}
+
+\QA{24}{Двудольный граф. Критерий двудольности}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Определение.} Вершины можно разбить на две доли без рёбер внутри каждой из них.
+\item \textbf{Критерий.} Все простые циклы имеют чётную длину.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~3}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=3}}
+
+\QA{25}{Вершинно простой путь, рёберно простой путь}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Вершинно простой путь.} Не повторяет вершины; это простая цепь.
+\item \textbf{Рёберно простой путь.} Не повторяет рёбра; это цепь.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~4}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=4}}
+
+\QA{26}{Лемма о простом пути}{Если есть маршрут из $u$ в $v$, то есть простая цепь между ними. Из маршрута можно последовательно вырезать участки между повторными посещениями одной вершины.}{\LectureSource{Весенний архив, лекция 2, стр.~5}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=5}}
+
+\QA{27}{Связность в неориентированном графе, компоненты связности. Связный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Связность вершин.} Между вершинами существует путь. Это отношение эквивалентности.
+\item \textbf{Компоненты связности.} Классы этого отношения.
+\item \textbf{Связный граф.} Граф, у которого одна компонента связности.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~6--7}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=6}}
+
+\QA{28}{Слабая связность, её компоненты и слабо связный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Слабая связность вершин.} Вершины связаны после удаления направлений у всех дуг.
+\item \textbf{Компоненты слабой связности.} Компоненты полученного неориентированного графа.
+\item \textbf{Слабо связный граф.} Граф, у которого одна компонента слабой связности.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~8}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=8}}
+
+\QA{29}{Сильная связность, её компоненты и сильно связный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Сильная связность вершин.} Между вершинами есть ориентированные пути в обе стороны.
+\item \textbf{Компоненты сильной связности.} Классы этого отношения эквивалентности.
+\item \textbf{Сильно связный граф.} Граф, у которого одна компонента сильной связности.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~8}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=8}}
+
+\QA{30}{Рёберная двусвязность. Компоненты и минимальная компонента}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Рёберная двусвязность.} Между двумя различными вершинами есть два пути без общих рёбер.
+\item \textbf{Компонента.} Подграф на классе эквивалентности вершин, с рёбрами внутри этого класса.
+\item \textbf{Минимальная компонента.} Одна вершина.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~10--11}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=10}}
+
+\QA{31}{Разрезающее множество. Разрез}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Разрезающее множество.} Множество рёбер, удаление которого увеличивает число компонент связности.
+\item \textbf{Разрез.} Разрезающее множество, минимальное по включению.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~12}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=12}}
+
+\QA{32}{Мост: определение и два эквивалентных определения}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Ребро само образует разрез, то есть одноэлементное разрезающее множество.
+\item Ребро соединяет разные компоненты рёберной двусвязности.
+\item Удаление ребра увеличивает число компонент связности на одну. Если граф был связным, он становится несвязным.
+\item В связном графе есть разбиение вершин на две непустые части $U,W$, и любой простой путь из $U$ в $W$ проходит через это ребро.
+\item Есть две вершины, соединённые путём, и каждый простой путь между ними проходит через это ребро.
+\item Ребро не входит ни в один цикл.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~12--13}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=12}}
+
+\QA{33}{Лемма о цикле и мосте}{Ребро является мостом тогда и только тогда, когда оно не лежит ни в одном цикле.}{\LectureSource{Весенний архив, лекция 2, стр.~13}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=13}}
+
+\QA{34}{Лемма про удаление моста}{Удаление моста увеличивает число компонент связности ровно на одну.}{\LectureSource{Весенний архив, лекция 2, стр.~13}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=13}}
+
+\QA{35}{Вершинная двусвязность. Компоненты и минимальная компонента}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Вершинная двусвязность.} Концы двух рёбер можно соединить двумя путями без общих вершин.
+\item \textbf{Компонента (блок).} Подграф из рёбер одного класса эквивалентности и их концов.
+\item \textbf{Минимальная компонента.} В примере на слайде -- одно ребро с его концами.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~14--15}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=14}}
+
+\QA{36}{Блок: определение через неразделимый подграф и эквивалентное определение}{Два общих описания блока:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Граф неразделим, если он связен и не имеет точек сочленения. Блок -- максимальный по включению неразделимый подграф.
+\item Компонента вершинной двусвязности: подграф, состоящий из рёбер одного класса вершинной двусвязности и их концов.
+\end{enumerate}
+Для связного графа хотя бы с тремя вершинами лекция даёт ещё шесть равносильных признаков блока:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Любые две вершины лежат на общем цикле.
+\item Любая вершина и любое ребро, не являющееся петлёй, лежат на общем цикле.
+\item Любые два ребра, не являющиеся петлями, лежат на общем цикле.
+\item Для любых двух различных вершин и любого ребра, не являющегося петлёй, найдётся простая цепь между вершинами, проходящая через это ребро.
+\item Для любых попарно различных $u,v,w$ есть простая цепь из $u$ в $w$ через $v$.
+\item Для любых попарно различных $u,v,w$ есть простая цепь из $u$ в $w$, которая не проходит через $v$.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 2, стр.~14}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=14}\enspace\textperiodcentered\enspace \LectureSource{стр.~16}{https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view\#page=16}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 3, стр.~4}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=4}}
+
+\QA{37}{Точка сочленения: два эквивалентных определения}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Удаление вершины увеличивает число компонент связности.
+\item Вершина принадлежит как минимум двум блокам.
+\item В связном графе есть две другие вершины $u,w$, и все простые цепи между ними проходят через данную вершину.
+\item В связном графе множество остальных вершин можно разбить на две непустые части так, что любая простая цепь из одной части в другую проходит через данную вершину.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 3, стр.~2}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=2}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 3, стр.~3}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=3}}
+
+\QA{38}{Лемма о точке сочленения (одна на выбор)}{Леммы со слайда:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item В связном графе с более чем одной вершиной $v$ является точкой сочленения ровно тогда, когда есть две другие вершины $u,w$, и все простые цепи между ними проходят через $v$. Равносильно: $V\setminus\{v\}$ разбивается на две непустые части, и любой простой путь между частями проходит через $v$.
+\item Два различных блока связного графа имеют не более одной общей вершины.
+\item В блоке хотя бы с тремя вершинами любые две вершины лежат на общем цикле.
+\item В блоке хотя бы с тремя вершинами любая вершина и любое ребро, не являющееся петлёй, лежат на общем цикле.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 3, стр.~3}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=3}}
+
+\QA{39}{Эксцентриситет}{Для вершины $v$ это расстояние до самой далёкой вершины: $\varepsilon(v)=\max_{u\in V}d(v,u)$.}{\LectureSource{Весенний архив, лекция 3, стр.~12}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=12}}
+
+\QA{40}{Радиус, диаметр и центр}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Радиус.} Минимальный эксцентриситет вершины.
+\item \textbf{Диаметр.} Максимальный эксцентриситет, или наибольшее расстояние между двумя вершинами.
+\item \textbf{Центр.} Множество вершин, эксцентриситет которых равен радиусу.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 3, стр.~12}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=12}}
+
+\QA{41}{Планарный граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Планарный граф можно уложить на плоскости так, чтобы рёбра не пересекались вне общих концов.
+\item Плоский граф -- граф с уже выбранной такой укладкой.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 6, стр.~2}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=2}}
+
+\QA{42}{Грань планарного графа}{Две формулировки для выбранной плоской укладки:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Максимальный участок плоскости, любые две точки которого можно соединить кривой, не пересекающей рёбер графа.
+\item Одна из областей, на которые граф разбивает плоскость. Неограниченная область называется внешней гранью.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 6, стр.~2}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=2}}
+
+\QA{43}{Формула Эйлера}{Для связного плоского графа $|V|-|E|+F=2$, где $F$ -- число граней, включая внешнюю.}{\LectureSource{Весенний архив, лекция 6, стр.~3}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=3}}
+
+\QA{44}{Необходимые условия планарности}{Для простого связного планарного графа при $|V|\ge3$: $|E|\le3|V|-6$, откуда следует существование вершины степени не больше пяти. Если граф вдобавок двудольный, $|E|\le2|V|-4$.}{\LectureSource{Весенний архив, лекция 6, стр.~4--6}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=4}}
+
+\QA{45}{Критерий планарности}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Критерий Понтрягина -- Куратовского.} Граф планарен тогда и только тогда, когда у него нет подграфов, гомеоморфных $K_5$ или $K_{3,3}$.
+\item \textbf{Теорема Вагнера.} Граф планарен тогда и только тогда, когда ни $K_5$, ни $K_{3,3}$ не являются его минорами.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 6, стр.~7--9}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=7}}
+
+\QA{46}{Дерево (два определения)}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item $G$ связен и не имеет циклов.
+\item Каждые две различные вершины $G$ соединены ровно одной простой цепью.
+\item $G$ связен и $|V|=|E|+1$.
+\item $G$ ацикличен и $|V|=|E|+1$.
+\item $G$ ацикличен, и при добавлении ребра между любыми двумя несмежными вершинами возникает ровно один простой цикл.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 3, стр.~17--18}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=17}}
+
+\QA{47}{Граф блоков и точек сочленения}{Двудольный граф: в одной доле блоки, в другой точки сочленения. Ребро соединяет блок с каждой входящей в него точкой сочленения. Для связного исходного графа эта конструкция даёт дерево.}{\LectureSource{Весенний архив, лекция 3, стр.~21}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=21}}
+
+\QA{48}{Граф компонент рёберной двусвязности}{Каждую компоненту сжимают в вершину; вершины соединяют мостами исходного графа. Для связного исходного графа получается дерево.}{\LectureSource{Весенний архив, лекция 3, стр.~22}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=22}}
+
+\QA{49}{Остов графа}{Связный ациклический частичный подграф исходного графа. Он содержит все его вершины.}{\LectureSource{Весенний архив, лекция 4, стр.~8--9}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=8}}
+
+\QA{50}{Цикломатическое число}{Число рёбер, которые надо удалить из связного графа, чтобы остался остов. Поскольку у остова $|V|-1$ рёбер, это число равно $|E|-|V|+1$.}{\LectureSource{Весенний архив, лекция 4, стр.~8}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=8}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 3, стр.~17}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=17}}
+
+\QA{51}{Цикл, ассоциированный с остовом}{При добавлении к остову одного ребра вне остова возникает единственный цикл: это ребро вместе с единственным путём в остове между его концами.}{\LectureSource{Весенний архив, лекция 4, стр.~8}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=8}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 3, стр.~17}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=17}}
+
+\QA{52}{Фундаментальная система циклов}{Для выбранного остова -- все циклы, получаемые добавлением к этому остову по отдельности каждого неостовного ребра.}{\LectureSource{Весенний архив, лекция 4, стр.~8}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=8}}
+
+\QA{53}{Минимальное остовное дерево}{Остов взвешенного графа с минимальной суммой весов рёбер среди всех остовов.}{\LectureSource{Весенний архив, лекция 4, стр.~11--12}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=11}}
+
+\QA{54}{Безопасное ребро}{Ребро вне уже выбранного подграфа $T'$, после добавления которого $T'$ по-прежнему можно дополнить до некоторого минимального остова.}{\LectureSource{Весенний архив, лекция 4, стр.~13}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=13}}
+
+\QA{55}{Разрез (разбиение множества вершин)}{Разбиение множества вершин $V$ на две непересекающиеся части $S$ и $T=V\setminus S$.}{\LectureSource{Весенний архив, лекция 4, стр.~14}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=14}}
+
+\QA{56}{Ребро, пересекающее разрез}{Ребро, один конец которого находится в $S$, другой -- в $T$.}{\LectureSource{Весенний архив, лекция 4, стр.~14}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=14}}
+
+\QA{57}{Лемма о безопасном ребре}{Пусть $T'$ входит в некоторый минимальный остов, и ни одно ребро $T'$ не пересекает выбранный разрез. Любое ребро минимального веса среди пересекающих разрез безопасно для $T'$.}{\LectureSource{Весенний архив, лекция 4, стр.~15}{https://drive.google.com/file/d/1UEcDrRSU2ZYwLPnmCIgZ_105Tf9PJ3hE/view\#page=15}}
+
+\QA{58}{Расстояние между двумя вершинами графа}{Длина кратчайшего маршрута между ними.}{\LectureSource{Весенний архив, лекция 3, стр.~11}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=11}}
+
+\QA{59}{Кратчайший путь между двумя вершинами}{Путь между данными вершинами, длина которого равна расстоянию между ними.}{\LectureSource{Весенний архив, лекция 3, стр.~11--12}{https://drive.google.com/file/d/1hwUOPo2YReiUiJTyAbKLgaB3sNSHQk9c/view\#page=11}}
+
+\QA{60}{Эйлеров путь}{Путь, проходящий по каждому ребру графа ровно один раз.}{\LectureSource{Весенний архив, лекция 5, стр.~2}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=2}}
+
+\QA{61}{Отличие эйлерова и полуэйлерова графов}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Эйлеров граф.} Содержит эйлеров цикл, то есть замкнутый эйлеров путь.
+\item \textbf{Полуэйлеров граф.} Содержит эйлеров путь, но не содержит эйлерова цикла.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 5, стр.~2}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=2}}
+
+\QA{62}{Эквивалентные определения эйлерова графа}{Для связного графа с более чем одной вершиной эквивалентны:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item В графе есть эйлеров цикл: замкнутый путь, проходящий по каждому ребру ровно один раз.
+\item Степень каждой вершины чётна.
+\item Множество рёбер можно разбить на циклы.
+\end{enumerate}
+Для графа с изолированными вершинами общий критерий приведён в ответе 64.}{\LectureSource{Весенний архив, лекция 5, стр.~4--6}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=4}}
+
+\QA{63}{Теорема о покрытии рёбер графа путями}{При $2N>0$ вершинах нечётной степени в связном графе рёбра можно покрыть $N$ рёберно простыми путями. Связность нужна для применения эйлерова критерия при доказательстве; для произвольного несвязного графа утверждение в таком виде неверно.}{\LectureSource{Весенний архив, лекция 5, стр.~7}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=7}}
+
+\QA{64}{Критерий эйлеровости}{Все вершины имеют чётную степень, а все рёбра принадлежат одной компоненте связности. Изолированные вершины не влияют на возможность обхода рёбер.}{\LectureSource{Весенний архив, лекция 5, стр.~2}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=2}}
+
+\QA{65}{Произвольно вычерчиваемый граф}{Граф произвольно вычерчиваем из $v$, если любую начатую в $v$ цепь можно продолжить до эйлерова цикла.}{\LectureSource{Весенний архив, лекция 5, стр.~8}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=8}}
+
+\QA{66}{Теорема о произвольно вычерчиваемом графе}{Неодноэлементный эйлеров граф произвольно вычерчиваем из $v$ тогда и только тогда, когда каждый его цикл содержит $v$.}{\LectureSource{Весенний архив, лекция 5, стр.~9--10}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=9}}
+
+\QA{67}{Принцип построения произвольно вычерчиваемого графа}{Взять лес и новую вершину $v$. Вершины леса нечётной степени соединить с $v$ нечётным числом рёбер, вершины чётной степени -- чётным числом рёбер. В $v$ можно добавить петли.}{\LectureSource{Весенний архив, лекция 5, стр.~11}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=11}}
+
+\QA{68}{Гамильтонов путь, полугамильтонов граф}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Гамильтонов путь.} Проходит через каждую вершину ровно один раз.
+\item \textbf{Полугамильтонов граф.} По определению лекции содержит гамильтонов путь.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 5, стр.~12}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=12}}
+
+\QA{69}{Гамильтонов граф, гамильтонов цикл}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Гамильтонов цикл.} Проходит через все вершины; повторяются только совпадающие начало и конец.
+\item \textbf{Гамильтонов граф.} Содержит гамильтонов цикл.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 5, стр.~12}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=12}}
+
+\QA{70}{Теорема Оре}{Если в простом неориентированном графе с $n\ge3$ вершинами для каждой пары несмежных вершин $u,v$ выполнено $\deg(u)+\deg(v)\ge n$, то граф гамильтонов.}{\LectureSource{Весенний архив, лекция 5, стр.~13}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=13}}
+
+\QA{71}{Теорема Дирака}{Если в простом неориентированном графе с $n\ge3$ вершинами каждая вершина имеет степень не меньше $n/2$, то граф гамильтонов.}{\LectureSource{Весенний архив, лекция 5, стр.~13}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=13}}
+
+\QA{72}{Теорема Гуйя-Ури}{Если орграф на $n$ вершинах сильно связен и для каждой вершины выполнены $\deg^+(v)\ge n/2$ и $\deg^-(v)\ge n/2$, то орграф гамильтонов.}{\LectureSource{Весенний архив, лекция 5, стр.~13}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=13}}
+
+\QA{73}{Для любого ли гамильтонова графа выполнены условия теорем о гамильтоновости и почему?}{Нет: условия на слайде достаточные. Из определения следует контрпример: простой цикл $C_5$ гамильтонов, но все степени равны $2$, так что ограничения Дирака и Оре не выполнены. У ориентированного цикла степени входа и выхода равны $1$, поэтому условие из приведённой версии теоремы Гуйя-Ури также не обязательно.}{\LectureSource{Весенний архив, лекция 5, стр.~12--13}{https://drive.google.com/file/d/17gDjDVg2MeAb0PhQorW7OPuqeSB73gVO/view\#page=12}}
+
+\end{document}

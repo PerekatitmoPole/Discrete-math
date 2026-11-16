@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\makeatletter
+\def\input@path{{../../}}
+\makeatother
+\usepackage{discrete-practice}
+
+\begin{document}
+
+\PracticeHeader{2}{}{ДКА, НКА, регулярные выражения}
+
+\Task{Задание 1}
+Пусть $L$ -- формальный язык. Докажите, что $(L^*)^*=L^*$.
+
+\Task{Задание 2}
+Пусть $R$ и $S$ -- языки. Докажите или опровергните, что
+\[
+  (R\mid S)^* = R^*\mid S^*,
+  \qquad (R\mid S)^*=(R^*S^*)^*.
+\]
+
+\Task{Задание 3}
+Рассмотрим ДКА со следующей таблицей переходов.
+Опишите неформально язык, допустимый данным ДКА.
+\begin{center}
+  \includegraphics[width=.49\linewidth]{Practice_automata_1.png}\hfill
+  \includegraphics[width=.47\linewidth]{Practice_automata_2.png}
+\end{center}
+
+\Task{Задание 4}
+Преобразуйте следующий НКА в эквивалентный ДКА.
+\begin{center}
+  \includegraphics[width=.56\linewidth]{Practice_automata_3.png}
+\end{center}
+
+\clearpage
+
+\Task{Задание 5}
+Постройте регулярные выражения для следующих языков над алфавитом
+$\Sigma=\{0,1\}$.
+\begin{alphlist}
+  \item[\textbf{а)}] $L_1=\{w\in\Sigma^*\mid$ после каждого 0 в слове $w$ следует $1\}$.
+  \item[\textbf{б)}] $L_2=\{w\in\Sigma^*\mid$ вторая или третья буква с конца $w$ это $1\}$.
+  \item[\textbf{в)}] $L_3=\{w\in\Sigma^*\mid w$ состоит из чередующихся 0 и 1$\}$.
+  \item[\textbf{г)}] $L_4=\{w\in\Sigma^*\mid |w|\ge 2$ и $w$ содержит чётное число нулей$\}$.
+\end{alphlist}
+
+\Task{Задание 6}
+Постройте регулярное выражение, которое будет распознавать число, которое
+делится на четыре. Алфавит: $\Sigma=\{0,1,2,3,4,5,6,7,8,9\}$.
+
+\Task{Задание 7}
+Рассмотрите следующий $\varepsilon$-НКА:
+\begin{center}
+  \includegraphics[width=.7\linewidth]{Practice_automata_4.png}
+\end{center}
+\begin{alphlist}
+  \item[\textbf{а)}] Найдите $\varepsilon$-замыкание каждого из состояний.
+\end{alphlist}
+{\small\itshape В исходном листке условие пункта б) обрывается.}
+
+\end{document}

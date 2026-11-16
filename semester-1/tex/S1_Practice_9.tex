@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\makeatletter
+\def\input@path{{../../}}
+\makeatother
+\usepackage{discrete-practice}
+
+\newcommand{\xor}{\oplus}
+
+\begin{document}
+
+\PracticeHeader{1}{9}{Полином Жегалкина и суперпозиции}
+
+\Task[Метод неопределённых коэффициентов]{Задание 1}
+Пусть для функции $f(x_1,x_2,\dots,x_n)$ задана таблица истинности. Запишем сначала данную функцию в виде полинома Жегалкина с неопределёнными коэффициентами:
+\[
+f(x_1,\dots,x_n)=
+a_0 \xor a_1x_1 \xor \dots \xor a_nx_n \xor a_{12}x_1x_2 \xor \dots \xor a_{12\dots n}x_1x_2\dots x_n.
+\]
+Затем по очереди подставляем всевозможные наборы в порядке увеличения количества единиц и находим коэффициенты с учётом того, что $a \xor 1=\overline{a}$, а $a \xor 0=a$. За каждую подстановку находим только один коэффициент.
+\[
+\includegraphics[width=0.5\linewidth]{P9.tab.jpg}
+\]
+
+\Task[Метод треугольника и метод Паскаля]{Задание 2}
+Построить полином Жегалкина:
+\begin{alphlist}
+    \item методом треугольника;
+    \item методом Паскаля.
+\end{alphlist}
+
+\Task[Метод эквивалентных преобразований]{Задание 3}
+Построить полином Жегалкина для функции методом эквивалентных преобразований:
+\[
+f(x,y)=x\to\bigl(y\to \overline{x}y\bigr).
+\]
+
+\Task[Суперпозиция и упрощение]{Задание 4}
+Построить и упростить формулу функции $h$, учитывая:
+\[
+h=f\bigl(x_1,\,g(x_1,x_2),\,x_3\bigr),
+\]
+где
+\[
+f(x_1,x_2,x_3)=x_1+x_2+x_2x_3,
+\qquad
+g(x_1,x_2)=x_1x_2.
+\]
+
+\Task[Суперпозиция функций, заданных векторами]{Задание 5}
+Функции $f(x_1,x_2)$ и $g(x_1,x_2)$ заданы вектором значений, требуется получить суперпозицию $h$.
+\begin{numlist}
+    \item $f(x_1,x_2)=(1011),\quad g(x_1,x_2)=(0111)$
+    \begin{itemize}
+        \item $h=f\bigl(x_1,\,g(x_1,x_2)\bigr)$
+        \item $h=f\bigl(f(x_1,\,g(x_2,x_2)),\,g(x_1,x_2)\bigr)$
+    \end{itemize}
+
+    \item $f(x_1,x_3)=(1010),\quad g(x_2,x_3)=(0110)$
+    \begin{itemize}
+        \item $h=f\bigl(x_1,\,g(x_2,x_3)\bigr)$
+        \item $h=g\bigl(g(x_2,x_3),\,f(x_1,x_1)\bigr)$
+    \end{itemize}
+\end{numlist}
+
+\end{document}

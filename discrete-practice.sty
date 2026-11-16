@@ -1,0 +1,68 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{discrete-practice}[2026/11/16 Practice sheets for Discrete Mathematics]
+
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[russian]{babel}
+\RequirePackage{lmodern}
+\renewcommand{\rmdefault}{cmr}
+\RequirePackage{microtype}
+\RequirePackage{amssymb,amsthm,mathtools}
+\RequirePackage[a4paper,top=20mm,bottom=22mm,left=23mm,right=23mm]{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{enumitem}
+\RequirePackage[hidelinks,unicode]{hyperref}
+
+\setlength{\parindent}{1.25em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=*,itemsep=.13\baselineskip,topsep=.18\baselineskip}
+\setlist[itemize]{leftmargin=*,itemsep=.2\baselineskip,topsep=.25\baselineskip}
+\newlist{alphlist}{enumerate}{1}
+\setlist[alphlist]{label=\textbf{\alph*)},leftmargin=*,align=left,
+  itemsep=.14\baselineskip,topsep=.15\baselineskip,parsep=0pt}
+\newlist{numlist}{enumerate}{1}
+\setlist[numlist]{label=\textbf{\arabic*)},leftmargin=*,align=left,
+  itemsep=.14\baselineskip,topsep=.15\baselineskip,parsep=0pt}
+
+\newcommand{\Task}[2][]{%
+  \par\addvspace{.75\baselineskip}%
+  \noindent\textbf{#2}\IfBlankF{#1}{. #1}%
+  \par\nobreak\vspace{.15\baselineskip}%
+  \@afterindentfalse\@afterheading
+}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}{-1ex \@plus -.2ex \@minus -.1ex}{.45ex}%
+    {\normalfont\normalsize\bfseries}%
+}
+
+% The optional first argument holds an additional link or relevant reading.
+\newcommand{\PracticeHeader}[4][]{%
+  \Practice@header{#2}{Практика}{#3}{#4}{#1}%
+}
+
+\newcommand{\HomeworkHeader}[3]{%
+  \Practice@header{#1}{Домашнее задание}{#2}{#3}{}%
+}
+
+\newcommand{\Practice@header}[5]{%
+  \graphicspath{{semester-#1/images/}{../images/}}%
+  \hypersetup{pdftitle={#4},pdfsubject={Дискретная математика}}%
+  {\centering
+    {\LARGE\bfseries #4\par}%
+    \vspace{1.5mm}%
+    {\small Дискретная математика\enspace\textperiodcentered\enspace
+      Семестр~#1\enspace\textperiodcentered\enspace #2\IfBlankF{#3}{~#3}\par}%
+    \vspace{1mm}%
+    {\small
+      \PracticeLink{Репозиторий курса на GitHub}{https://github.com/PerekatitmoPole/Discrete-math}%
+      \IfBlankF{#5}{\enspace\textperiodcentered\enspace #5}\par}%
+  }%
+  \vspace{3mm}%
+  \hrule height .3pt
+  \vspace{1mm}%
+  \setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\abovedisplayshortskip}{3pt plus 2pt}%
+  \setlength{\belowdisplayshortskip}{4pt plus 1pt minus 1pt}%
+}
+
+\newcommand{\PracticeLink}[2]{\href{#2}{\underline{#1}}}

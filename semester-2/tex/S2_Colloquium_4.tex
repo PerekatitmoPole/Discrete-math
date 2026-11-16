@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\usepackage{discrete-practice}
+
+\newcommand{\ColloquiumHeader}[3]{%
+  \csname Practice@header\endcsname{#1}{Коллоквиум}{#2}{Вопросы и ответы}{}%
+  \hypersetup{pdftitle={Дискретная математика: Коллоквиум #2}}%
+}
+\newcommand{\LectureSource}[2]{\PracticeLink{#1}{#2}}
+\newcommand{\QA}[4]{%
+  \par\addvspace{.65\baselineskip}\noindent
+  \begin{minipage}[t]{\linewidth}
+    \raggedright
+    \textbf{#1. #2}\par\nobreak
+    \vspace{.15\baselineskip}
+    #3\par\nobreak
+    {\small #4\par}%
+  \end{minipage}\par
+}
+\begin{document}
+\ColloquiumHeader{2}{4}
+\medskip\noindent\small Под каждым ответом указаны файл лекции и страницы PDF.
+Номера весенних лекций соответствуют именам файлов в архиве.
+\par\normalsize
+
+\QA{1}{Метод математической индукции}{Для утверждения $P(n)$ доказывают базу $P(n_0)$. Затем предполагают $P(n)$ при произвольном $n\ge n_0$ и из него доказывают $P(n+1)$. После этого $P(n)$ верно для всех $n\ge n_0$. В лекции это применяют, например, к числу подмножеств $n$-элементного множества.}{\LectureSource{Лекция 1, стр.~15}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=15}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 6, стр.~3}{https://drive.google.com/file/d/1MclkysQbbRJUW55vvEpNKIJ0twWRbLhF/view\#page=3}}
+
+\QA{2}{Определение сочетания (не формулой)}{В обоих случаях выбирают $k$ элементов из $n$ возможных.
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Без повторений.} Неупорядоченный выбор, в котором все выбранные элементы различны.
+\item \textbf{С повторениями.} Неупорядоченный выбор, в котором один элемент можно выбрать несколько раз.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 11, стр.~15}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=15}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 11, стр.~17}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=17}}
+
+\QA{3}{Формулы для сочетаний без повторений}{$\displaystyle\binom nk=\frac{n!}{k!(n-k)!}$. Рекурсия Паскаля: $\displaystyle\binom nk=\binom{n-1}{k}+\binom{n-1}{k-1}$, на краях $\binom n0=\binom nn=1$.}{\LectureSource{Весенний архив, лекция 11, стр.~15--16}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=15}}
+
+\QA{4}{Формулы для сочетаний с повторениями}{При $n\ge1$: $\displaystyle\overline C_n^k=\binom{n+k-1}{k}=\binom{n+k-1}{n-1}=\frac{(n+k-1)!}{k!(n-1)!}$.}{\LectureSource{Весенний архив, лекция 11, стр.~17}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=17}}
+
+\QA{5}{Определение размещения (не формулой)}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Без повторений.} Упорядоченный набор из $k$ различных элементов исходного множества.
+\item \textbf{С повторениями.} Упорядоченный набор из $k$ элементов исходного множества; один элемент может стоять на нескольких позициях.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 11, стр.~13--14}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=13}}
+
+\QA{6}{Формулы для размещений без повторений}{$\displaystyle A_n^k=n(n-1)\cdots(n-k+1)=\frac{n!}{(n-k)!}$. Рекурсия: $A_n^k=nA_{n-1}^{k-1}$, при $k>0$; $A_n^0=1$.}{\LectureSource{Весенний архив, лекция 11, стр.~13}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=13}}
+
+\QA{7}{Формула для размещений с повторениями}{$\overline A_n^k=n^k$: на каждую из $k$ позиций можно независимо выбрать один из $n$ элементов.}{\LectureSource{Весенний архив, лекция 11, стр.~14}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=14}}
+
+\QA{8}{Определение перестановки (не формулой)}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Без повторений.} Упорядочение всех элементов множества.
+\item \textbf{С повторениями.} Упорядочение всех экземпляров элементов с сохранением заданных кратностей.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 11, стр.~11--12}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=11}}
+
+\QA{9}{Формула перестановок с повторениями}{Для кратностей $n_1,\ldots,n_m$ с суммой $n$: $\displaystyle P(n;n_1,\ldots,n_m)=\frac{n!}{n_1!\cdots n_m!}$.}{\LectureSource{Весенний архив, лекция 11, стр.~12}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=12}}
+
+\QA{10}{Формула перестановок без повторений}{$P_n=n!=n(n-1)\cdots 1$. Из рекурсии на слайде: $P_n=nP_{n-1}$.}{\LectureSource{Весенний архив, лекция 11, стр.~11}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=11}}
+
+\QA{11}{Отличие перестановок и размещений}{Перестановка упорядочивает все $n$ элементов, размещение упорядочивает выбранные $k$ элементов. Без повторений при $k=n$ размещение является перестановкой.}{\LectureSource{Весенний архив, лекция 11, стр.~11--14}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=11}}
+
+\QA{12}{Принцип Дирихле}{Если разложить $n+1$ объект по $n$ ящикам, хотя бы в одном окажется не меньше двух. В общем случае для $m$ объектов и $n>0$ ящиков один из них содержит хотя бы $\lceil m/n\rceil$ объектов.}{\LectureSource{Весенний архив, лекция 12, стр.~15}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=15}}
+
+\QA{13}{Принцип сложения}{Если способы разбиты на непересекающиеся группы и в $i$-й группе $m_i$ способов, общее число способов равно $m_1+\cdots+m_r$.}{\LectureSource{Весенний архив, лекция 11, стр.~6--7}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=6}}
+
+\QA{14}{Принцип умножения}{Если первый шаг имеет $m_1$ вариантов, второй -- $m_2$ при любом выборе на первом, и так далее, то последовательность шагов можно выполнить $m_1\cdots m_r$ способами.}{\LectureSource{Весенний архив, лекция 11, стр.~5}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=5}}
+
+\QA{15}{Формула включения-исключения}{Из суммы мощностей множеств вычитают сумму мощностей попарных пересечений, прибавляют сумму по тройкам и так далее:
+\[\left|\bigcup_{i=1}^n A_i\right|=\sum_{\varnothing\ne I\subseteq\{1,\dots,n\}}(-1)^{|I|+1}\left|\bigcap_{i\in I} A_i\right|.\]}{\LectureSource{Весенний архив, лекция 11, стр.~8--9}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=8}}
+
+\QA{16}{Лексикографический порядок на строках}{На упорядоченном алфавите сначала сравнивают символы слева направо. При первом различии меньше строка с меньшим символом. Если одна строка -- собственный префикс другой, то она меньше.}{\LectureSource{Весенний архив, лекция 12, стр.~9--10}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=9}}
+
+\QA{17}{Формирование следующей в лексикографическом порядке перестановки}{Справа найти первый индекс $i$ с $a_i<a_{i+1}$. Поменять $a_i$ с наименьшим из элементов справа, превосходящих $a_i$. Упорядочить хвост после $i$ по возрастанию. Если такого $i$ нет, перестановка последняя.}{\LectureSource{Весенний архив, лекция 12, стр.~11}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=11}}
+
+\QA{18}{Формирование следующего в лексикографическом порядке сочетания той же длины}{Представить сочетание как $a_1<\cdots<a_k$ из чисел $1,\ldots,n$. Найти самый правый индекс $i$, на котором $a_i<n-k+i$. Увеличить $a_i$ на единицу и дописать после него последовательные числа. Если такого $i$ нет, сочетание последнее.}{\LectureSource{Весенний архив, лекция 12, стр.~13}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=13}}
+
+\QA{19}{Правило симметрии для сочетаний}{$\binom nk=\binom n{n-k}$: выбранное $k$-элементное подмножество однозначно соответствует своему $(n-k)$-элементному дополнению.}{\LectureSource{Весенний архив, лекция 11, стр.~16}{https://drive.google.com/file/d/1_3tNw13Fo4V840_xqNprrmZs7MflB2Zv/view\#page=16}}
+
+\QA{20}{Теорема Вандермонда}{$\displaystyle\binom{n+m}{r}=\sum_{k=0}^r\binom nk\binom m{r-k}$. Разбиваем выбор из двух непересекающихся групп по числу $k$ элементов из первой.}{\LectureSource{Весенний архив, лекция 12, стр.~7}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=7}}
+
+\QA{21}{Следствие из теоремы Вандермонда}{При $m=r=n$ получаем $\displaystyle\binom{2n}{n}=\sum_{k=0}^n\binom nk^2$, поскольку $\binom n{n-k}=\binom nk$.}{\LectureSource{Весенний архив, лекция 12, стр.~7}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=7}}
+
+\QA{22}{Биномиальная теорема}{$\displaystyle(a+b)^n=\sum_{k=0}^n\binom nk a^k b^{n-k}$. Коэффициент считает, сколькими способами можно выбрать $k$ множителей, дающих $a$.}{\LectureSource{Весенний архив, лекция 12, стр.~5--6}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=5}}
+
+\QA{23}{Теорема о сумме сочетаний (следствие из биномиальной)}{Подставляем $a=b=1$ и получаем $\displaystyle\sum_{k=0}^n\binom nk=2^n$.}{\LectureSource{Весенний архив, лекция 12, стр.~5--6}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=5}}
+
+\QA{24}{Теорема о коэффициентах биномиального треугольника}{В треугольнике Паскаля крайние элементы строки равны единице, а внутренний коэффициент равен сумме двух соседних над ним: $\binom nk=\binom{n-1}{k-1}+\binom{n-1}{k}$.}{\LectureSource{Весенний архив, лекция 12, стр.~4}{https://drive.google.com/file/d/1TR4FtunoMf18dRkaWK5IwarKOu5JpJbK/view\#page=4}}
+
+\QA{25}{Алфавит, символ}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Алфавит.} Конечное непустое множество символов $\Sigma$.
+\item \textbf{Символ.} Отдельный элемент алфавита с однозначно распознаваемой записью.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 9, стр.~3}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=3}}
+
+\QA{26}{Слово (цепочка)}{Конечная последовательность символов данного алфавита. Синоним -- строка.}{\LectureSource{Весенний архив, лекция 9, стр.~3}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=3}}
+
+\QA{27}{Длина цепочки}{Число символов в цепочке $\omega$, обозначается $|\omega|$.}{\LectureSource{Весенний архив, лекция 9, стр.~3}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=3}}
+
+\QA{28}{Пустая цепочка}{$\varepsilon$ -- последовательность длины $0$. При конкатенации $\varepsilon\omega=\omega\varepsilon=\omega$.}{\LectureSource{Весенний архив, лекция 9, стр.~3--4}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=3}}
+
+\QA{29}{Степень алфавита}{$\Sigma^k$ -- множество слов длины $k$ над $\Sigma$. Нулевая степень $\Sigma^0=\{\varepsilon\}$.}{\LectureSource{Весенний архив, лекция 9, стр.~3}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=3}}
+
+\QA{30}{Степень языка}{$L^0=\{\varepsilon\}$, а $L^k=LL^{k-1}$ при $k>0$: все конкатенации $k$ слов языка $L$.}{\LectureSource{Весенний архив, лекция 9, стр.~6}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=6}}
+
+\QA{31}{Конкатенация цепочек}{В $xy$ сначала записываются символы $x$, затем символы $y$. Длина результата равна $|x|+|y|$.}{\LectureSource{Весенний архив, лекция 9, стр.~4}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=4}}
+
+\QA{32}{Конкатенация языков}{$LM=\{\alpha\beta\mid\alpha\in L,\ \beta\in M\}$.}{\LectureSource{Весенний архив, лекция 9, стр.~6}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=6}}
+
+\QA{33}{Замыкание Клини}{$\displaystyle L^*=\bigcup_{i=0}^{\infty}L^i$. Это все конкатенации конечного числа слов языка $L$, включая пустое слово.}{\LectureSource{Весенний архив, лекция 9, стр.~6}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=6}}
+
+\QA{34}{Формальный язык}{Любое подмножество $L\subseteq\Sigma^*$, где $\Sigma^*$ -- множество всех конечных слов над $\Sigma$.}{\LectureSource{Весенний архив, лекция 9, стр.~5}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=5}}
+
+\QA{35}{Множество регулярных языков}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Наименьший класс, содержащий $\varnothing$, $\{\varepsilon\}$ и все $\{a\}$ при $a\in\Sigma$ и замкнутый относительно объединения, конкатенации и звезды Клини.
+\item Через уровни: $R_0$ содержит эти базовые языки; $R_{i+1}$ содержит $R_i$ и результаты применения одной из трёх операций к языкам из $R_i$. Тогда $\mathrm{REG}=\bigcup_{i\ge0}R_i$.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 9, стр.~7}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=7}}
+
+\QA{36}{Регулярное выражение}{Запись регулярного языка через выражения $\varnothing$, $\varepsilon$ и $a\in\Sigma$ и операции альтернативы ($\alpha\mid\beta$), конкатенации ($\alpha\beta$) и звезды ($\alpha^*$). Эти операции обозначают соответствующие операции над языками.}{\LectureSource{Весенний архив, лекция 9, стр.~7--10}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=7}}
+
+\QA{37}{Регулярный язык}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Его можно получить из $\varnothing$, $\{\varepsilon\}$ и односимвольных языков $\{a\}$ конечным числом объединений, конкатенаций и операций звезды Клини.
+\item Его можно описать регулярным выражением.
+\item Его распознаёт конечный автомат. На слайде автомат показан в двух формах: диаграммой и таблицей переходов.
+\end{enumerate}
+}{\LectureSource{Весенний архив, лекция 9, стр.~7--10}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=7}\enspace\textperiodcentered\enspace \LectureSource{Весенний архив, лекция 10, стр.~2}{https://drive.google.com/file/d/1Paoz0wHG9rrWDbSJYArSKUNRpjjSSXqz/view\#page=2}}
+
+\QA{38}{Детерминированный конечный автомат}{Пятёрка $(\Sigma,Q,s,T,\delta)$: алфавит, конечное множество состояний, начальное состояние $s\in Q$, допускающие состояния $T\subseteq Q$ и функция $\delta\colon Q\times\Sigma\to Q$, выбирающая ровно одно следующее состояние.}{\LectureSource{Весенний архив, лекция 9, стр.~12}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=12}}
+
+\QA{39}{Недетерминированный конечный автомат}{Пятёрка $(\Sigma,Q,s,T,\delta)$ с функцией переходов $\delta\colon Q\times\Sigma\to 2^Q$. Для состояния и символа может быть несколько переходов или ни одного. Слово допускается, если хотя бы одно вычисление по всему слову заканчивается в состоянии из $T$.}{\LectureSource{Весенний архив, лекция 10, стр.~4--5}{https://drive.google.com/file/d/1Paoz0wHG9rrWDbSJYArSKUNRpjjSSXqz/view\#page=4}}
+
+\QA{40}{Язык автомата}{Множество слов, которые автомат допускает: после чтения всего слова из начального состояния он приходит в допускающее состояние.}{\LectureSource{Весенний архив, лекция 9, стр.~13}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=13}}
+
+\QA{41}{Теорема Клини}{Классы регулярных и автоматных языков совпадают: язык регулярен тогда и только тогда, когда его распознаёт конечный автомат.}{\LectureSource{Весенний архив, лекция 9, стр.~14}{https://drive.google.com/file/d/16czv3xjvBt7vYCocFweh0peX0Ysk8KcB/view\#page=14}}
+
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\makeatletter
+\def\input@path{{../../}}
+\makeatother
+\usepackage{discrete-practice}
+
+\begin{document}
+
+\PracticeHeader{2}{3}{Двусвязность}
+
+\Task{Задание 1}
+Найти и выделить на графах ниже все (обоснуйте свои ответы)
+\begin{numlist}[itemsep=.12\baselineskip]
+  \item точки сочленения
+  \item блоки
+  \item мосты
+  \item компоненты реберной двусвязности (укажите размер макс и мин компоненты)
+  \item компоненты вершинной двусвязности (укажите размер макс и мин компоненты)
+  \item проверьте графы из задания на двудольность
+\end{numlist}
+\noindent\makebox[\linewidth]{\includegraphics[width=.86\linewidth]{Practice_3_1.png}}\par
+
+\Task{Задание 2}
+Является ли граф:
+\begin{numlist}[itemsep=.12\baselineskip]
+  \item двудольным
+  \item реберно-двусвязным
+  \item вершинно-двусвязным
+  \item постройте дерево блоков и точек сочленения
+\end{numlist}
+\noindent\makebox[\linewidth]{\includegraphics[width=.31\linewidth]{Practice_3_2.png}}\par
+\smallskip
+
+Кубический граф --
+\href{https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D1%84_(%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)}{граф},
+в котором все
+\href{https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D1%88%D0%B8%D0%BD%D0%B0_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)}{вершины}
+имеют
+\href{https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BF%D0%B5%D0%BD%D1%8C_%D0%B2%D0%B5%D1%80%D1%88%D0%B8%D0%BD%D1%8B_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)}{степень}
+три. Другими словами, кубический граф является 3-\href{https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84}{регулярным}.
+Кубические графы называются также тривалентными.
+
+{\centering
+  \includegraphics[width=.78\linewidth]{Practice_3_3.png}\par\nobreak
+  {\small BLOCK GRAPH}\par
+}
+
+\end{document}

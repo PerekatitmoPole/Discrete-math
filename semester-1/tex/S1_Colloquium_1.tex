@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+\usepackage{discrete-practice}
+
+\newcommand{\ColloquiumHeader}[3]{%
+  \csname Practice@header\endcsname{#1}{Коллоквиум}{#2}{Вопросы и ответы}{}%
+  \hypersetup{pdftitle={Дискретная математика: Коллоквиум #2}}%
+}
+\newcommand{\LectureSource}[2]{\PracticeLink{#1}{#2}}
+\newcommand{\QA}[4]{%
+  \par\addvspace{.65\baselineskip}\noindent
+  \begin{minipage}[t]{\linewidth}
+    \raggedright
+    \textbf{#1. #2}\par\nobreak
+    \vspace{.15\baselineskip}
+    #3\par\nobreak
+    {\small #4\par}%
+  \end{minipage}\par
+}
+\begin{document}
+\ColloquiumHeader{1}{1}
+\medskip\noindent\small Под каждым ответом указаны файл лекции и страницы PDF.
+\par\normalsize
+
+\QA{1}{Определение множества (любое из трёх)}{В лекции множество -- первичное понятие. Приведены три описания:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Совокупность объектов, выделенных по общему свойству.
+\item Совокупность объектов произвольной природы, которую рассматривают как единое целое.
+\item Неупорядоченный набор элементов без повторений.
+\end{enumerate}
+}{\LectureSource{Лекция 1, стр.~8}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=8}}
+
+\QA{2}{Способы задания множеств}{Перечислить элементы или указать характеристическое свойство: $A=\{a\mid P(a)\}$.}{\LectureSource{Лекция 1, стр.~10}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=10}}
+
+\QA{3}{Подмножество и отличие собственных и несобственных подмножеств}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Подмножество.} $B\subseteq A$, если каждый элемент $B$ принадлежит $A$.
+\item \textbf{Несобственные подмножества.} Само $A$ и $\varnothing$.
+\item \textbf{Собственные подмножества.} Все остальные подмножества $A$.
+\end{enumerate}
+Отдельно: знак строгого включения $B\subset A$ означает $B\subseteq A$ и $B\ne A$.}{\LectureSource{Лекция 1, стр.~12}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=12}}
+
+\QA{4}{Булеан множества}{$\mathcal P(A)=\{B\mid B\subseteq A\}$ -- множество всех подмножеств $A$, включая $\varnothing$ и $A$.}{\LectureSource{Лекция 1, стр.~14}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=14}}
+
+\QA{5}{Объединение множеств}{$A\cup B=\{x\mid x\in A\text{ или }x\in B\}$: достаточно принадлежать хотя бы одному из множеств.}{\LectureSource{Лекция 1, стр.~18}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=18}}
+
+\QA{6}{Пересечение множеств}{$A\cap B=\{x\mid x\in A\text{ и }x\in B\}$.}{\LectureSource{Лекция 1, стр.~16}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=16}}
+
+\QA{7}{Дополнение множества}{Дополнение $A$ относительно универсума $U$ -- множество $\overline A=U\setminus A$.}{\LectureSource{Лекция 1, стр.~22}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=22}}
+
+\QA{8}{Разность множеств}{$A\setminus B=\{x\mid x\in A,\ x\notin B\}$.}{\LectureSource{Лекция 1, стр.~20}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=20}}
+
+\QA{9}{Симметрическая разность множеств}{$A\triangle B=(A\setminus B)\cup(B\setminus A)$: элементы принадлежат ровно одному из двух множеств.}{\LectureSource{Лекция 1, стр.~21}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=21}}
+
+\QA{10}{Декартово произведение множеств}{$A\times B=\{(a,b)\mid a\in A,\ b\in B\}$. Пары в этом множестве упорядочены.}{\LectureSource{Лекция 2, стр.~11}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=11}}
+
+\QA{11}{Прямое произведение четырёх множеств}{$A_1\times A_2\times A_3\times A_4=\{(a_1,a_2,a_3,a_4)\mid a_i\in A_i,\ i=1,2,3,4\}$.}{\LectureSource{Лекция 2, стр.~12}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=12}}
+
+\QA{12}{Кортеж}{Упорядоченный набор объектов. Порядок определяется позициями его элементов.}{\LectureSource{Лекция 2, стр.~11}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=11}}
+
+\QA{13}{Равенство упорядоченных пар и кортежей}{Кортежи равны, если у них одинаковая длина и равны элементы на каждой соответствующей позиции. Например, $(a,b)=(c,d)$, если и только если $a=c$ и $b=d$.}{\LectureSource{Лекция 2, стр.~11--13}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=11}}
+
+\QA{14}{Свойство коммутативности}{Перестановка аргументов сохраняет результат: $A\cup B=B\cup A$ и $A\cap B=B\cap A$.}{\LectureSource{Лекция 1, стр.~25}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=25}}
+
+\QA{15}{Свойство дистрибутивности}{$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$; двойственный закон: $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$.}{\LectureSource{Лекция 1, стр.~25}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=25}}
+
+\QA{16}{Критерий равенства двух множеств (метод двух включений)}{$A=B$ тогда и только тогда, когда $A\subseteq B$ и $B\subseteq A$. Для доказательства проверяют оба включения.}{\LectureSource{Лекция 2, стр.~5}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=5}}
+
+\QA{17}{Равные множества (определение)}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item $A$ и $B$ состоят из одних и тех же элементов.
+\item Эквивалентно: $A\subseteq B$ и $B\subseteq A$.
+\end{enumerate}
+}{\LectureSource{Лекция 1, стр.~13}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=13}\enspace\textperiodcentered\enspace \LectureSource{Лекция 2, стр.~5}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=5}}
+
+\QA{18}{Свойство ассоциативности}{Перегруппировка аргументов сохраняет результат: $(A\cup B)\cup C=A\cup(B\cup C)$ и $(A\cap B)\cap C=A\cap(B\cap C)$.}{\LectureSource{Лекция 1, стр.~25}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=25}}
+
+\QA{19}{Законы поглощения}{$A\cup(A\cap B)=A$ и $A\cap(A\cup B)=A$.}{\LectureSource{Лекция 2, стр.~9}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=9}}
+
+\QA{20}{Законы склеивания}{$(A\cap B)\cup(A\cap\overline B)=A$, \quad $(A\cup B)\cap(A\cup\overline B)=A$.}{\LectureSource{Лекция 2, стр.~9}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=9}}
+
+\QA{21}{Законы де Моргана}{$\overline{A\cap B}=\overline A\cup\overline B$ и $\overline{A\cup B}=\overline A\cap\overline B$.}{\LectureSource{Лекция 1, стр.~26}{https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view\#page=26}}
+
+\QA{22}{Бинарное отношение на множествах}{Бинарное отношение $R$ между $A$ и $B$ -- произвольное подмножество $A\times B$. Запись $aRb$ означает $(a,b)\in R$.}{\LectureSource{Лекция 2, стр.~18}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=18}}
+
+\QA{23}{Способы задания бинарных отношений}{Правило, список пар, таблица или матрица (в том числе отмеченные точки на координатной плоскости), граф и графическая схема со стрелками между элементами множеств.}{\LectureSource{Лекция 2, стр.~19--20}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=19}}
+
+\QA{24}{Область определения отношения и область значений отношения}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Область определения.} $\operatorname{dom}R$ -- множество первых координат пар из $R$.
+\item \textbf{Область значений.} $\operatorname{ran}R$ -- множество вторых координат пар из $R$.
+\end{enumerate}
+}{\LectureSource{Лекция 2, стр.~21}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=21}}
+
+\QA{25}{Обратное отношение}{$R^{-1}=\{(b,a)\mid(a,b)\in R\}$. Если $R\subseteq A\times B$, то $R^{-1}\subseteq B\times A$.}{\LectureSource{Лекция 2, стр.~22}{https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view\#page=22}}
+
+\QA{26}{Композиция отношений}{Если $R\subseteq A\times B$ и $S\subseteq B\times C$, то $(a,c)\in S\circ R$ тогда и только тогда, когда существует $b\in B$ с $aRb$ и $bSc$. В порядке применения это $R;S$.}{\LectureSource{Лекция 3, стр.~3}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=3}}
+
+\QA{27}{Степень отношения}{Для $R$ на $A$ нулевая степень $R^0=\{(a,a)\mid a\in A\}$, $R^1=R$, а $R^{i+1}=R\circ R^i$.}{\LectureSource{Лекция 3, стр.~4}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=4}}
+
+\QA{28}{Теорема об ассоциативности композиции отношений (формулировка)}{Для $R\subseteq A\times B$, $S\subseteq B\times C$ и $T\subseteq C\times D$ верно $T\circ(S\circ R)=(T\circ S)\circ R$.}{\LectureSource{Лекция 3, стр.~5}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=5}}
+
+\QA{29}{Симметричное отношение}{Для всех $x,y$: из $xRy$ следует $yRx$.}{\LectureSource{Лекция 3, стр.~7}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=7}}
+
+\QA{30}{Асимметричное отношение}{Для всех $x,y$: из $xRy$ следует, что $yRx$ не выполняется.}{\LectureSource{Лекция 3, стр.~7}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=7}}
+
+\QA{31}{Антисимметричное отношение}{Для всех $x,y$: из $xRy$ и $yRx$ следует $x=y$.}{\LectureSource{Лекция 3, стр.~7}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=7}}
+
+\QA{32}{Несимметричное отношение}{На слайде это случай, когда есть и двусторонняя пара различных элементов, и односторонняя пара. Такое отношение ни симметрично, ни антисимметрично.}{\LectureSource{Лекция 3, стр.~7}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=7}}
+
+\QA{33}{Рефлексивность}{$xRx$ для каждого $x$ из множества, на котором задано отношение.}{\LectureSource{Лекция 3, стр.~6}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=6}}
+
+\QA{34}{Антирефлексивность}{Ни для одного $x$ не выполняется $xRx$.}{\LectureSource{Лекция 3, стр.~6}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=6}}
+
+\QA{35}{Нерефлексивность}{По терминологии лекции, $xRx$ выполняется для одних элементов и не выполняется для других.}{\LectureSource{Лекция 3, стр.~6}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=6}}
+
+\QA{36}{Транзитивное отношение}{Для всех $x,y,z$: если $xRy$ и $yRz$, то $xRz$.}{\LectureSource{Лекция 3, стр.~8}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=8}}
+
+\QA{37}{Антитранзитивное отношение}{Для всех $x,y,z$: если $xRy$ и $yRz$, то $xRz$ не выполняется.}{\LectureSource{Лекция 3, стр.~8}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=8}}
+
+\QA{38}{Нетранзитивность}{На слайде это смешанный случай: есть тройка с двумя последовательными парами, для которой $xRz$ есть, и тройка, для которой при наличии двух последовательных пар $xRz$ нет.}{\LectureSource{Лекция 3, стр.~8}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=8}}
+
+\QA{39}{Замыкание отношения относительно свойства}{Минимальное по включению отношение, содержащее исходное $R$ и обладающее заданным свойством.}{\LectureSource{Лекция 4, стр.~2}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=2}}
+
+\QA{40}{Отношение эквивалентности}{Рефлексивное, симметричное и транзитивное бинарное отношение на множестве.}{\LectureSource{Лекция 4, стр.~4}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=4}}
+
+\QA{41}{Класс эквивалентности}{Для элемента $a$ класс $[a]_R=\{x\in A\mid aRx\}$ -- множество всех элементов, эквивалентных $a$.}{\LectureSource{Лекция 4, стр.~7}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=7}}
+
+\QA{42}{Порождающий элемент}{Элемент, эквивалентный всем элементам данного класса. Любой элемент класса порождает этот же класс.}{\LectureSource{Лекция 4, стр.~7--8}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=7}}
+
+\QA{43}{Разбиение множества}{Семейство непустых попарно непересекающихся подмножеств, объединение которых равно исходному множеству.}{\LectureSource{Лекция 4, стр.~5--6}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=5}}
+
+\QA{44}{Теорема про разбиение и классы эквивалентности}{Классы любой эквивалентности на $A$ образуют разбиение $A$. Обратно, любое разбиение задаёт эквивалентность: два элемента эквивалентны ровно тогда, когда входят в одну часть.}{\LectureSource{Лекция 4, стр.~10--11}{https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view\#page=10}}
+
+\QA{45}{Отношения строгого и нестрогого частичного порядка}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Нестрогий частичный порядок.} Рефлексивное, антисимметричное и транзитивное отношение.
+\item \textbf{Строгий частичный порядок.} Антирефлексивное, асимметричное и транзитивное отношение.
+\end{enumerate}
+}{\LectureSource{Лекция 5, стр.~2--3}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=2}}
+
+\QA{46}{Отношения строгого и нестрогого линейного порядка}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Нестрогий линейный порядок.} Нестрогий частичный порядок, в котором для любых $a,b$ выполняется $aRb$ или $bRa$.
+\item \textbf{Строгий линейный порядок.} Строгий частичный порядок, в котором $aRb$ или $bRa$ требуется для любых различных $a,b$.
+\end{enumerate}
+}{\LectureSource{Лекция 5, стр.~7}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=7}}
+
+\QA{47}{Отношение соответствия}{В лекции отношения соответствия между $A$ и $B$ делятся на четыре вида:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Одно-однозначное.} Каждому элементу $A$ соответствует один элемент $B$ и наоборот.
+\item \textbf{Одно-многозначное.} Элементу $A$ могут соответствовать несколько элементов $B$; в обратную сторону соответствие однозначное.
+\item \textbf{Много-однозначное.} Элементу $A$ соответствует один элемент $B$; одному элементу $B$ могут соответствовать несколько элементов $A$.
+\item \textbf{Много-многозначное.} С обеих сторон одному элементу могут соответствовать несколько элементов.
+\end{enumerate}
+}{\LectureSource{Лекция 5, стр.~9--10}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=9}}
+
+\QA{48}{Линейно упорядоченное множество}{Множество с заданным на нём линейным порядком.}{\LectureSource{Лекция 5, стр.~7--8}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=7}}
+
+\QA{49}{Частично упорядоченное множество}{Множество с заданным на нём частичным порядком.}{\LectureSource{Лекция 5, стр.~4}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=4}}
+
+\QA{50}{Функциональное отношение}{Две формулировки с лекции:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Каждому $x\in X$ соответствует не более одного $y\in Y$.
+\item В матрице отношения, где строки отвечают элементам $X$, а столбцы -- элементам $Y$, в каждой строке не более одной единицы.
+\end{enumerate}
+}{\LectureSource{Лекция 5, стр.~11}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=11}}
+
+\QA{51}{Недоопределённая функция}{Для функционального отношения $f$ равносильны:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Оно задано не на всём $X$: $\operatorname{dom}f\ne X$.
+\item Ни один элемент $Y$ не сопоставлен хотя бы одному элементу $X$. В матрице это строка без единиц.
+\end{enumerate}
+}{\LectureSource{Лекция 5, стр.~11}{https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view\#page=11}}
+
+\QA{52}{Какими свойствами обладает отношение, когда нельзя определить свойство симметричности однозначно?}{Из определений на слайде: если нет пар с различными координатами, отношение одновременно симметрично и антисимметрично. Если нет и петель, то это пустое отношение, которое ещё и асимметрично. Асимметричность всегда влечёт антисимметричность.}{\LectureSource{Лекция 3, стр.~7}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=7}}
+
+\QA{53}{Какими свойствами обладает отношение, когда нельзя определить свойство транзитивности однозначно?}{Из формул на слайде: если нет ни одной тройки с $xRy$ и $yRz$, отношение и транзитивно, и антитранзитивно. В обоих определениях условие проверяется только на таких тройках.}{\LectureSource{Лекция 3, стр.~8}{https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view\#page=8}}
+
+\end{document}

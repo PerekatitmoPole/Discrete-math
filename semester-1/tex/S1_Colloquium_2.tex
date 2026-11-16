@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+\usepackage{discrete-practice}
+
+\newcommand{\ColloquiumHeader}[3]{%
+  \csname Practice@header\endcsname{#1}{Коллоквиум}{#2}{Вопросы и ответы}{}%
+  \hypersetup{pdftitle={Дискретная математика: Коллоквиум #2}}%
+}
+\newcommand{\LectureSource}[2]{\PracticeLink{#1}{#2}}
+\newcommand{\QA}[4]{%
+  \par\addvspace{.65\baselineskip}\noindent
+  \begin{minipage}[t]{\linewidth}
+    \raggedright
+    \textbf{#1. #2}\par\nobreak
+    \vspace{.15\baselineskip}
+    #3\par\nobreak
+    {\small #4\par}%
+  \end{minipage}\par
+}
+\begin{document}
+\ColloquiumHeader{1}{2}
+\medskip\noindent\small Под каждым ответом указаны файл лекции и страницы PDF.
+Лекции 11--14 взяты из осеннего архива.
+\par\normalsize
+
+\QA{1}{Определение высказывания}{Утверждение, которому можно приписать одно из двух значений: истина или ложь.}{\LectureSource{Лекция 6, стр.~3}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=3}}
+
+\QA{2}{Арность операции (функции)}{Число аргументов. У функции $f\colon\mathbb B^n\to\mathbb B$ арность равна $n$; в лекции допускается $n=0$.}{\LectureSource{Лекция 7, стр.~3}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=3}}
+
+\QA{3}{Булева алгебра: определение, аксиомы и законы}{Алгебра на множестве с $0$ и $1$ с бинарными операциями $\lor,\land$ и унарным отрицанием. Аксиомы: коммутативность, ассоциативность, взаимная дистрибутивность, тождества с $0$ и $1$, дополнение. В лекции выведены единственность дополнения, идемпотентность, свойство констант, инволюция, поглощение, склеивание и законы де Моргана.}{\LectureSource{Лекция 6, стр.~11--20}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=11}}
+
+\QA{4}{Булево множество}{$\mathbb B=\{0,1\}$: ноль обозначает ложь, единица -- истину.}{\LectureSource{Лекция 6, стр.~10}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=10}}
+
+\QA{5}{Закон единственности дополнения}{Если $x+y=1$ и $xy=0$, то $y=\overline x$. Два разных дополнения у одного элемента быть не могут.}{\LectureSource{Лекция 6, стр.~13}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=13}}
+
+\QA{6}{Закон инволюции}{Двойное дополнение возвращает исходный элемент: $\overline{\overline x}=x$.}{\LectureSource{Лекция 6, стр.~16}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=16}}
+
+\QA{7}{Теорема склеивания}{$xy+x\overline y=x$ и двойственное тождество $(x+y)(x+\overline y)=x$. В первом случае выносим $x$ и используем $y+\overline y=1$.}{\LectureSource{Лекция 6, стр.~17}{https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view\#page=17}}
+
+\QA{8}{В чём отличие функции и формулы?}{Функция определяется значениями на всех входных наборах. Формула задаёт, какие операции и в каком порядке вычислять. Разные формулы выражают одну функцию, если дают одинаковые значения на всех наборах.}{\LectureSource{Лекция 7, стр.~8--9}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=8}}
+
+\QA{9}{Число булевых функций от $n$ аргументов}{$2^{2^n}$: есть $2^n$ входных наборов, и на каждом можно независимо выбрать $0$ или $1$.}{\LectureSource{Лекция 7, стр.~5}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=5}}
+
+\QA{10}{ДНФ}{Дизъюнкция простых конъюнкций. Каждая из них состоит из одной или нескольких переменных либо их отрицаний, без повторения одной и той же переменной.}{\LectureSource{Лекция 7, стр.~13}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=13}}
+
+\QA{11}{КНФ}{Конъюнкция простых дизъюнкций. В каждой дизъюнкции входящие переменные могут быть взяты с отрицанием или без него и не повторяются.}{\LectureSource{Лекция 7, стр.~14}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=14}}
+
+\QA{12}{Минтерм}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Конъюнкция, в которой каждая из $n$ переменных входит ровно один раз, прямо или с отрицанием.
+\item Булева функция, которая равна $1$ ровно на одном наборе. Переменные с нулём на этом наборе входят с отрицанием.
+\end{enumerate}
+}{\LectureSource{Лекция 7, стр.~15}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=15}}
+
+\QA{13}{СДНФ}{Дизъюнкция всех минтермов, соответствующих тем и только тем строкам таблицы, где функция равна $1$.}{\LectureSource{Лекция 7, стр.~19}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=19}}
+
+\QA{14}{Импликанта}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Каждый минтерм $\varphi$ является минтермом $f$.
+\item На любом наборе $\mathbf x$ из $\varphi(\mathbf x)=1$ следует $f(\mathbf x)=1$.
+\end{enumerate}
+}{\LectureSource{Лекция 8, стр.~15}{https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view\#page=15}}
+
+\QA{15}{Простая импликанта}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Импликанта, записанная одной простой конъюнкцией, никакая собственная часть которой не является импликантой.
+\item Эквивалентная проверка: при удалении любого литерала конъюнкция перестаёт быть импликантой.
+\end{enumerate}
+}{\LectureSource{Лекция 8, стр.~16}{https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view\#page=16}}
+
+\QA{16}{Число импликант функции}{$2^m$, где $m$ -- число минтермов функции. Любое подмножество этих минтермов задаёт импликанту; пустое соответствует функции $0$.}{\LectureSource{Лекция 8, стр.~15}{https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view\#page=15}}
+
+\QA{17}{Минимизация булевой формулы. Методы минимизации}{Ищут компактную равносильную формулу. Для ДНФ находят простые импликанты и выбирают покрытие единичных наборов. На лекциях разобраны алгебраические преобразования, карты Карно, методы Квайна, Квайна -- Мак-Класки и Петрика. При окончательном выборе минимальной ДНФ сравнивают число вхождений переменных.}{\LectureSource{Лекция 8, стр.~17}{https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view\#page=17}\enspace\textperiodcentered\enspace \LectureSource{Лекция 9, стр.~13--20}{https://drive.google.com/file/d/1Qu9Xb5jDu4nNVXJjN5KxN2WBZyrIAtFn/view\#page=13}}
+
+\QA{18}{Сокращённая ДНФ}{Дизъюнкция всех простых импликант функции.}{\LectureSource{Лекция 8, стр.~17}{https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view\#page=17}}
+
+\QA{19}{Тупиковая ДНФ}{Дизъюнкция простых импликант, в которой нет лишней: удаление любой из них меняет функцию.}{\LectureSource{Лекция 9, стр.~16}{https://drive.google.com/file/d/1Qu9Xb5jDu4nNVXJjN5KxN2WBZyrIAtFn/view\#page=16}}
+
+\QA{20}{Минимальная ДНФ}{Тупиковая ДНФ с наименьшим числом вхождений переменных среди тупиковых форм.}{\LectureSource{Лекция 9, стр.~16}{https://drive.google.com/file/d/1Qu9Xb5jDu4nNVXJjN5KxN2WBZyrIAtFn/view\#page=16}}
+
+\QA{21}{Макстерм}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Дизъюнкция, в которой каждая из $n$ переменных входит ровно один раз, прямо или с отрицанием.
+\item Булева функция, которая равна $0$ ровно на одном наборе. Переменные с единицей на этом наборе входят с отрицанием.
+\end{enumerate}
+}{\LectureSource{Лекция 7, стр.~17}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=17}}
+
+\QA{22}{СКНФ}{Конъюнкция всех макстермов, соответствующих тем и только тем строкам таблицы, где функция равна $0$.}{\LectureSource{Лекция 7, стр.~23}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=23}}
+
+\QA{23}{Теорема разложения для ДНФ и КНФ}{Обозначим $f_0=f(0,x_2,\ldots,x_n)$ и $f_1=f(1,x_2,\ldots,x_n)$. Тогда $f=x_1f_1+\overline{x_1}f_0$ и $f=(x_1+f_0)(\overline{x_1}+f_1)$. Последовательное разложение по всем переменным даёт соответственно СДНФ или СКНФ.}{\LectureSource{Лекция 7, стр.~20--24}{https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view\#page=20}}
+
+\QA{24}{Полином Жегалкина. Методы построения}{Исключающее \guillemotleft{}или\guillemotright{} ($\oplus$) одночленов, в каждом из которых переменные перемножаются конъюнкцией и не повторяются; коэффициенты $0$ или $1$. Для каждой булевой функции полином единственен. Методы: преобразование СДНФ, неопределённые коэффициенты, треугольник и метод Паскаля.}{\LectureSource{Лекция 10, стр.~8--17}{https://drive.google.com/file/d/1bo9-p5QOp919CRgFlWnAGtTMxqiPrEyw/view\#page=8}}
+
+\QA{25}{Суперпозиция функций}{Функция, полученная из данных функций подстановками одной функции в другую и отождествлением переменных.}{\LectureSource{Осенний архив, лекция 11, стр.~3--4}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=3}}
+
+\QA{26}{Подстановка функции $g$ в функцию $f$}{Заменить $i$-й аргумент функции $f$ значением $g$: $h=f(x_1,\ldots,x_{i-1},g(y_1,\ldots,y_m),x_{i+1},\ldots,x_n)$.}{\LectureSource{Осенний архив, лекция 11, стр.~3}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=3}}
+
+\QA{27}{Отождествление переменных в функции $f$}{Две позиции получают одну и ту же переменную: $j$-й аргумент заменяют $i$-м. Например, из $f(x,y,z)$ получается $h(x,z)=f(x,x,z)$.}{\LectureSource{Осенний архив, лекция 11, стр.~4}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=4}}
+
+\QA{28}{Замкнутое множество функций}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Множество $A$ содержит все функции, которые можно выразить суперпозициями его элементов.
+\item Эквивалентно: замыкание совпадает с исходным множеством, $[A]=A$.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 11, стр.~8}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=8}}
+
+\QA{29}{Замыкание множества функций}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Множество всех суперпозиций функций из $A$.
+\item Множество всех булевых функций, выражаемых формулами над $A$.
+\item Минимальный замкнутый класс, содержащий $A$.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 11, стр.~6--8}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=6}}
+
+\QA{30}{Полная система функций}{Система $A$, для которой $[A]$ совпадает с множеством всех булевых функций.}{\LectureSource{Осенний архив, лекция 11, стр.~9}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=9}}
+
+\QA{31}{Безызбыточная и избыточная полные системы функций}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Безызбыточная полная система.} Теряет полноту при удалении любой функции.
+\item \textbf{Избыточная полная система.} Остаётся полной после удаления хотя бы одной функции.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 11, стр.~9}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=9}}
+
+\QA{32}{Самодвойственная функция. Число самодвойственных функций от $n$ аргументов}{$f(\overline{\mathbf x})=\overline{f(\mathbf x)}$. При $n\ge1$ наборы образуют $2^{n-1}$ пар противоположных наборов, в каждой можно свободно выбрать только одно значение. Итого $2^{2^{n-1}}$.}{\LectureSource{Осенний архив, лекция 11, стр.~10}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=10}}
+
+\QA{33}{Линейная функция. Число линейных функций от $n$ аргументов}{В полиноме Жегалкина нет произведений разных переменных: $f=a_0\oplus a_1x_1\oplus\cdots\oplus a_nx_n$. Выбор $n+1$ коэффициентов даёт $2^{n+1}$ функций.}{\LectureSource{Осенний архив, лекция 11, стр.~11}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=11}}
+
+\QA{34}{Монотонная функция}{Для любых двух наборов $\mathbf x\le\mathbf y$ в покоординатном порядке выполняется $f(\mathbf x)\le f(\mathbf y)$.}{\LectureSource{Осенний архив, лекция 11, стр.~12}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=12}}
+
+\QA{35}{Сравнимые наборы}{Наборы $\mathbf x$ и $\mathbf y$ сравнимы, если $x_i\le y_i$ для всех $i$ или $y_i\le x_i$ для всех $i$.}{\LectureSource{Осенний архив, лекция 11, стр.~12}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=12}}
+
+\QA{36}{Функции, сохраняющие константу. Число таких функций от $n$ аргументов}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Сохранение нуля.} $f(0,\ldots,0)=0$; это класс $T_0$.
+\item \textbf{Сохранение единицы.} $f(1,\ldots,1)=1$; это класс $T_1$.
+\end{enumerate}
+В каждом классе $2^{2^n-1}$ функций: значение на одном наборе зафиксировано, остальные свободны.}{\LectureSource{Осенний архив, лекция 11, стр.~14--15}{https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view\#page=14}}
+
+\QA{37}{Формулировка критерия Поста}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Система полна тогда и только тогда, когда она не содержится целиком ни в одном из классов $S,M,L,T_0,T_1$.
+\item Равносильно: в системе есть несамодвойственная, немонотонная, нелинейная, не сохраняющая ноль и не сохраняющая единицу функции. Одна функция может удовлетворять сразу нескольким из этих требований.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 12, стр.~7}{https://drive.google.com/file/d/11CzyRALCghyLRvRCl3gAfAbQsH_6e56s/view\#page=7}}
+
+\QA{38}{Полные системы из одной функции}{Одноэлементные системы из двухместной функции, приведённые на лекции:
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item Штрих Шеффера: $\{\overline{x\land y}\}$.
+\item Стрелка Пирса: $\{\overline{x\lor y}\}$.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 12, стр.~7}{https://drive.google.com/file/d/11CzyRALCghyLRvRCl3gAfAbQsH_6e56s/view\#page=7}}
+
+\QA{39}{Частично определённая (недоопределённая) функция}{Булева функция, значение которой задано не на всех входных наборах.}{\LectureSource{Осенний архив, лекция 12, стр.~14}{https://drive.google.com/file/d/11CzyRALCghyLRvRCl3gAfAbQsH_6e56s/view\#page=14}}
+
+\QA{40}{Кодирование}{Функция $c\colon A^*\to B^*$ из слов исходного алфавита в слова кодирующего алфавита. В разделимом коде сначала кодируют символы по отдельности, а затем соединяют их кодовые слова конкатенацией.}{\LectureSource{Осенний архив, лекция 13, стр.~3--4}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=3}}
+
+\QA{41}{Однозначно декодируемый код}{Инъективное кодирование: из $\alpha_1\ne\alpha_2$ следует $c(\alpha_1)\ne c(\alpha_2)$.}{\LectureSource{Осенний архив, лекция 13, стр.~4}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=4}}
+
+\QA{42}{Равномерный код}{Все символы исходного алфавита кодируются словами одинаковой длины.}{\LectureSource{Осенний архив, лекция 13, стр.~5}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=5}}
+
+\QA{43}{Энтропия сообщения}{Среднее количество информации на символ в битах: $H(p_1,\ldots,p_n)=-\sum_{i=1}^n p_i\log_2 p_i$, где $p_i$ -- вероятность символа.}{\LectureSource{Осенний архив, лекция 13, стр.~10}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=10}}
+
+\QA{44}{Неравенство Крафта -- Макмиллана}{Для длин $\ell_1,\ldots,\ell_n$ над кодирующим алфавитом мощности $d$ выполняется $\sum_{i=1}^n d^{-\ell_i}\le1$. Это необходимое условие для однозначно декодируемого алфавитного кода и достаточное для построения префиксного кода с этими длинами.}{\LectureSource{Осенний архив, лекция 13, стр.~15}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=15}}
+
+\QA{45}{Префиксная и суффиксная схемы}{
+\begin{enumerate}[label=\arabic*),parsep=0pt]
+\item \textbf{Префиксная схема.} Ни одно кодовое слово не является началом другого кодового слова.
+\item \textbf{Суффиксная схема.} Ни одно кодовое слово не является концом другого кодового слова.
+\end{enumerate}
+}{\LectureSource{Осенний архив, лекция 13, стр.~12--13}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=12}}
+
+\QA{46}{Избыточность схемы алфавитного кодирования}{В терминологии данной лекции -- средняя длина кодового слова. Вес каждого слова определяется вероятностью исходного символа.}{\LectureSource{Осенний архив, лекция 13, стр.~14}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=14}}
+
+\QA{47}{Формула подсчёта избыточности схемы}{На слайде эта величина вычисляется как $\overline\ell=\sum_{i=1}^n p_i\ell_i$, где $p_i$ -- вероятность символа, $\ell_i$ -- длина его кодового слова.}{\LectureSource{Осенний архив, лекция 13, стр.~14}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=14}}
+
+\QA{48}{Код Хаффмана}{Оптимальный двоичный префиксный код. Символам соответствуют листья с весами по частотам. На каждом шаге два узла наименьшего веса объединяют под общим родителем с суммой весов. Ветви помечают $0$ и $1$; код символа читают от корня к его листу.}{\LectureSource{Осенний архив, лекция 13, стр.~16--18}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=16}}
+
+\QA{49}{Код Шеннона -- Фано}{Расположить символы по убыванию вероятностей; разбить на две группы с как можно более близкими суммами вероятностей и назначить группам $0$ и $1$. Повторять внутри каждой группы, пока в ней не останется один символ.}{\LectureSource{Осенний архив, лекция 13, стр.~19--20}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=19}}
+
+\QA{50}{Арифметическое кодирование}{Начать с полуинтервала $[0,1)$. Разбить его пропорционально вероятностям символов, взять часть, соответствующую очередному символу, и повторить для неё. Любое число из итогового полуинтервала можно использовать как код сообщения.}{\LectureSource{Осенний архив, лекция 13, стр.~22--24}{https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view\#page=22}}
+
+\QA{51}{Расстояние Хэмминга}{Число позиций, в которых отличаются две строки одинаковой длины: $d(x,y)=|\{i\colon x_i\ne y_i\}|$.}{\LectureSource{Осенний архив, лекция 14, стр.~5--6}{https://drive.google.com/file/d/1NwaHao6V-G_wIjfmUuADr-ah0xMmVisT/view\#page=5}}
+
+\QA{52}{Код Хэмминга}{Код с контрольными битами в позициях $1,2,4,8,\ldots$. Остальные позиции информационные. Контрольный бит в позиции $2^k$ устанавливают так, чтобы XOR всех битов на позициях с единицей в $k$-м двоичном разряде номера, включая сам контрольный бит, был нулём.}{\LectureSource{Осенний архив, лекция 14, стр.~9--11}{https://drive.google.com/file/d/1NwaHao6V-G_wIjfmUuADr-ah0xMmVisT/view\#page=9}}
+
+\QA{53}{Принцип поиска и исправления ошибок в коде Хэмминга}{Проверить XOR каждого контрольного множества. Нули для совпавших проверок и единицы для нарушенных образуют двоичный синдром: младший разряд соответствует позиции $1$. Синдром $0$ означает, что проверки сошлись. При одиночной ошибке ненулевой синдром даёт номер бита, который нужно инвертировать.}{\LectureSource{Осенний архив, лекция 14, стр.~12--14}{https://drive.google.com/file/d/1NwaHao6V-G_wIjfmUuADr-ah0xMmVisT/view\#page=12}}
+
+\end{document}
