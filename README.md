@@ -8,19 +8,16 @@
 
 ### Лекции
 
-- [Лекция 1. Теория множеств](https://drive.google.com/file/d/1eLcCz8Qn0OOaBdrc9kjImDLZBqAkE7f2/view)
-- [Лекция 2. Теория множеств. Начало бинарных отношений](https://drive.google.com/file/d/1KXdlSwNdJiTs-ZDR4436FRaCL1CEeRbx/view)
-- [Лекция 3. Бинарные отношения](https://drive.google.com/file/d/1DknYEgcXwDPqh_ada8Ko1lNu_cNkUc7X/view)
-- [Лекция 4. Замыкание отношения. Эквивалентность. Разбиение](https://drive.google.com/file/d/1s_EMS8Y84cmLHLdquSkqHUiWw4OEe2c5/view)
-- [Лекция 5. Порядки, функциональные отношения и функции](https://drive.google.com/file/d/1yjhmYXwv8PjkPwu1Qqz1zKhfuzk2Ssca/view)
-- [Лекция 6. Булева алгебра](https://drive.google.com/file/d/1RfAXA-xdJlJCI_MZQdXwVm_NyZ3zlus3/view)
-- [Лекция 7. Булевы функции](https://drive.google.com/file/d/1BW1aA8090siuGj5yhxv1AFpJh58BgfcE/view)
-- [Лекция 8. Булевы функции. Минимизация](https://drive.google.com/file/d/1MY9OdgrBzJ-mJchdAvPIDDcf2SA91Qtb/view)
-- [Лекция 9. Булевы функции. Минимизация, часть 2](https://drive.google.com/file/d/1Qu9Xb5jDu4nNVXJjN5KxN2WBZyrIAtFn/view)
-- [Лекция 10. Алгебра Жегалкина](https://drive.google.com/file/d/1bo9-p5QOp919CRgFlWnAGtTMxqiPrEyw/view)
-
-#### Дополнительные лекции из осеннего архива
-
+- [Лекция 1. Теория множеств](https://drive.google.com/file/d/1g_W77iA17vOsrjsTw7Bupk-g8ziydhWC/view)
+- [Лекция 2. Теория множеств. Начало бинарных отношений](https://drive.google.com/file/d/1YjzIVwG0mOrGyWei0pSD68Ds6W2j_5IG/view)
+- [Лекция 3. Бинарные отношения](https://drive.google.com/file/d/17GhprCInKt3sHGroIVYkl-gNGEIZfesb/view)
+- [Лекция 4. Замыкание отношения. Эквивалентность. Разбиение](https://drive.google.com/file/d/1ju7C2v3Tt3HlP6ZKquTYOjsfZJBHKfnX/view)
+- [Лекция 5. Порядки, функциональные отношения и функции](https://drive.google.com/file/d/16NkZ9-Je3DO_NWwKqvcmDIdhuTNJJoRq/view)
+- [Лекция 6. Булева алгебра](https://drive.google.com/file/d/12gmcT9d1ssnlJeDF1hlUhIyVSAyGr8lh/view)
+- [Лекция 7. Булевы функции](https://drive.google.com/file/d/1z2435J1Bjm3XhlPNCTdyyNqhYK5pdcsc/view)
+- [Лекция 8. Булевы функции. Минимизация](https://drive.google.com/file/d/1Jd0h9mRLA1VLq7Q2USGU2NfmvbiNuXaK/view)
+- [Лекция 9. Булевы функции. Минимизация, часть 2](https://drive.google.com/file/d/1l_d32yQUFCH2_X2G3azVAK5vJmE08389/view)
+- [Лекция 10. Алгебра Жегалкина](https://drive.google.com/file/d/13BKDgn0z6W1ZUyTmwELJjEa41A5EyMEp/view)
 - [Лекция 11. Функциональная полнота](https://drive.google.com/file/d/1sCL-R52R7x2JclsOLtE0SkbMLDlqv4iz/view)
 - [Лекция 12. Критерий Поста](https://drive.google.com/file/d/11CzyRALCghyLRvRCl3gAfAbQsH_6e56s/view)
 - [Лекция 13. Кодирование. Энтропия, коды Хаффмана и Шеннона – Фано, арифметическое кодирование](https://drive.google.com/file/d/1HNmPzWQAex1kf8SQmDaxiGAw2ekd9piS/view)
@@ -50,16 +47,12 @@
 
 ### Коллоквиумы
 
-- [Коллоквиум 1. Множества и отношения – вопросы и ответы](semester-1/pdf/S1_Colloquium_1.pdf)
-- [Коллоквиум 2. Булевы функции и кодирование – вопросы и ответы](semester-1/pdf/S1_Colloquium_2.pdf)
+- [Коллоквиум 1. Множества и отношения](semester-1/pdf/S1_Colloquium_1.pdf)
+- [Коллоквиум 2. Булевы функции и кодирование](semester-1/pdf/S1_Colloquium_2.pdf)
 
 ## Второй семестр
 
-### Лекции (архив)
-
-Номера соответствуют именам файлов в архиве.
-
-[Папка с лекциями на Google Drive](https://drive.google.com/drive/u/0/folders/1E3Al2HgKO1jKLMBd1IsR5EQSp56h40Lq)
+### Лекции
 
 - [Лекция 1. Введение в теорию графов](https://drive.google.com/file/d/1M_JKz6itJFag191hicdYI_UGXj5VK4rL/view)
 - [Лекция 2. Связность](https://drive.google.com/file/d/1uV-3I-INKuTwh_JXyu06gDkGL9PRQtxT/view)
@@ -87,30 +80,11 @@
 ### Домашние задания
 
 - [ДЗ 1. Графы](semester-2/pdf/HW_1.pdf)
-- [ДЗ 2. Графы. Карта Европы](semester-2/pdf/HW_2.pdf)
+- [ДЗ 2. Графы](semester-2/pdf/HW_2.pdf)
+- [ДЗ 3. Конечные автоматы](semester-2/pdf/HW_3.pdf)
+- [ДЗ 4. Комбинаторика](semester-2/pdf/HW_4.pdf)
 
 ### Коллоквиумы
 
-- [Коллоквиум 3. Теория графов – вопросы и ответы](semester-2/pdf/S2_Colloquium_3.pdf)
-- [Коллоквиум 4. Комбинаторика и автоматы – вопросы и ответы](semester-2/pdf/S2_Colloquium_4.pdf)
-
-## Сборка листков практики
-
-Оба семестра используют общий стиль [discrete-practice.sty](discrete-practice.sty).
-В необязательный аргумент `\PracticeHeader[материалы]{семестр}{номер}{тема}`
-можно добавить одну или несколько ссылок через `\PracticeLink{подпись}{URL}`.
-Без этого аргумента строка материалов скрывается.
-
-Пример подключения лекции
-
-```latex
-\PracticeHeader[\PracticeLink{Лекция по теме}{https://example.org/lecture.pdf}]
-  {2}{1}{Графы}
-```
-
-Листки собираются из корня репозитория с помощью pdfLaTeX. В TeX Live понадобятся
-поддержка кириллицы, пакеты LaTeX Recommended и Extra и шрифты CM-Super.
-
-```bash
-pdflatex -halt-on-error -output-directory=semester-2/pdf semester-2/tex/S2_Practice_1.tex
-```
+- [Коллоквиум 3. Теория графов](semester-2/pdf/S2_Colloquium_3.pdf)
+- [Коллоквиум 4. Комбинаторика и автоматы](semester-2/pdf/S2_Colloquium_4.pdf)
